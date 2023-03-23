@@ -46,16 +46,16 @@ datos_raw |>
   count(line_comment_token, sort = TRUE)
 
 # selecciono y renombro
-datos_saved <- datos_raw |> 
+datos_sub <- datos_raw |> 
   select(title, line_comment_token, wikipedia_daily_page_views, appeared) |> 
   drop_na()
 
 # escribo los datos y leo
-write_tsv(datos_saved, here("2023/semana 12/datos_saved.tsv"))
-datos_saved <- read_tsv(here("2023/semana 12/datos_saved.tsv"))
+# write_tsv(datos_saved, here("2023/semana 12/datos_saved.tsv"))
+# datos_saved <- read_tsv(here("2023/semana 12/datos_saved.tsv"))
 
 # datos p/la figura
-datos <- datos_saved |> 
+datos <- datos_sub |> 
   group_by(line_comment_token) |> 
   slice_max(wikipedia_daily_page_views, n = 10) |> 
   mutate(suma = sum(wikipedia_daily_page_views)) |> 
