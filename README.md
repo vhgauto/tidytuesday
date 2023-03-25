@@ -1,7 +1,15 @@
 # TidyTuesday
-Figuras generadas a partir de los datos proporcionados por TidyTuesday.
+Figuras generadas a partir de los datos publicados por [TidyTuesday](https://github.com/rfordatascience/tidytuesday#readme).
 
 # 2023
+
+## Semana 7
+
+Deferencia de edad entre parejas en películas de Hollywood.
+
+[Script](2023/semana_07/2023-s07_script.R)
+
+![](2023/semana_07/viz.png)
 
 ## Semana 12
 
