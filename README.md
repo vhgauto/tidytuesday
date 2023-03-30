@@ -18,3 +18,11 @@ Lenguajes de programación y sus comentarios.
 [Script](2023/semana_12/2023-s12_script.R)
 
 ![](2023/semana_12/viz.png)
+
+## Semana 13
+
+Husos horarios.
+
+[Script](2023/semana_13/2023-s13_script.R)
+
+![](2023/semana_13/viz.png)
