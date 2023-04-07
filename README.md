@@ -26,3 +26,11 @@ Husos horarios.
 [Script](2023/semana_13/2023-s13_script.R)
 
 ![](2023/semana_13/viz.png)
+
+## Semana 14
+
+Premier League.
+
+[Script](2023/semana_14/2023-s14_script.R)
+
+![](2023/semana_14/viz.png)
