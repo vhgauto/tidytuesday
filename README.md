@@ -39,6 +39,6 @@ Premier League.
 
 Producción de huevos.
 
-[Script](2023/semana_14/2023-s15_script.R)
+[Script](2023/semana_15/2023-s15_script.R)
 
 ![](2023/semana_15/viz.png)
