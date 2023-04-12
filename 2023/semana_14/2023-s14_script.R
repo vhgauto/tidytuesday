@@ -19,9 +19,9 @@ showtext_auto()
 showtext_opts(dpi = 300)
 
 # íconos
-font_add("fa-reg", here("icon/Font Awesome 5 Free-Regular-400.otf"))
-font_add("fa-brands", here("icon/Font Awesome 5 Brands-Regular-400.otf"))
-font_add("fa-solid", here("icon/Font Awesome 5 Free-Solid-900.otf"))
+font_add("fa-reg", "icon/Font Awesome 5 Free-Regular-400.otf")
+font_add("fa-brands", "icon/Font Awesome 5 Brands-Regular-400.otf")
+font_add("fa-solid", "icon/Font Awesome 5 Free-Solid-900.otf")
 
 # caption
 icon_twitter <- "<span style='font-family:fa-brands; color:#e50312;'>&#xf099;</span>"
