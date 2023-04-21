@@ -42,3 +42,11 @@ Producción de huevos.
 [Script](2023/semana_15/2023-s15_script.R)
 
 ![](2023/semana_15/viz.png)
+
+## Semana 16
+
+Alimentación del período Neolítico.
+
+[Script](2023/semana_16/2023-s16_script.R)
+
+![](2023/semana_16/viz.png)
