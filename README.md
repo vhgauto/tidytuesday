@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 18
+
+Roedores de Arizona.
+
+[Script](2023/semana_18/2023-s18_script.R)
+
+![](2023/semana_18/viz.png)
+
 ## Semana 17
 
 Maratón de Londres.
