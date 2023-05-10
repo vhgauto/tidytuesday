@@ -62,7 +62,8 @@ datos <- childcare_costs |>
                names_to = "group") |> 
   separate(group, into = c("base", "age"), sep = "_") |> 
   mutate(study_year = factor(study_year)) |> 
-  select(-age)
+  select(-age) |> 
+  drop_na(price)
 
 # valores de mediana, por 'base' y 'study_year'
 m <- datos |> 
