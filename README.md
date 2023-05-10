@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 19
+
+Costo asociado al cuidado de bebés.
+
+[Script](2023/semana_18/2023-s19_script.R)
+
+![](2023/semana_19/viz.png)
+
 ## Semana 18
 
 Roedores de Arizona.
