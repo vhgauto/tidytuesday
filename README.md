@@ -3,11 +3,19 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 20
+
+Tornados en EEUU.
+
+[Script](2023/semana_20/2023-s20_script.R)
+
+![](2023/semana_20/viz.png)
+
 ## Semana 19
 
 Costo asociado al cuidado de bebés.
 
-[Script](2023/semana_18/2023-s19_script.R)
+[Script](2023/semana_19/2023-s19_script.R)
 
 ![](2023/semana_19/viz.png)
 
