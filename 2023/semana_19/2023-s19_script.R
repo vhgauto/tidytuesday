@@ -17,7 +17,6 @@ c3 <- "#df9ed4"
 c4 <- "#16317d"
 c5 <- "#a62f00"
 
-
 # eje vertical, años
 font_add_google(name = "Bebas Neue", family = "bebas")
 # texto gral
