@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 21
+
+Ardillas en Central Park.
+
+[Script](2023/semana_21/2023-s21_script.R)
+
+![](2023/semana_21/viz.png)
+
 ## Semana 20
 
 Tornados en EEUU.
