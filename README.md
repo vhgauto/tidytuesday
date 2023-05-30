@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 22
+
+La persona más longeva registrada, Jeanne Calment.
+
+[Script](2023/semana_22/2023-s22_script.R)
+
+![](2023/semana_22/viz.png)
+
 ## Semana 21
 
 Ardillas en Central Park.
