@@ -1,8 +1,6 @@
 
 # paquetes ----------------------------------------------------------------
 
-# browseURL("https://twitter.com/nrennie35/status/1663457969898680320")
-
 library(tidyverse)
 library(rvest)
 library(ggrepel)
@@ -10,7 +8,6 @@ library(glue)
 library(ggtext)
 library(showtext)
 
-" Signac"
 c1 <- "#f7f4f9"
 c2 <- "grey10"
 c3 <- "#381a61"
@@ -44,17 +41,13 @@ sep <- glue("**|**")
 
 mi_caption <- glue("{fuente} {sep} {autor} {sep} {icon_github} {icon_twitter} {usuario}")
 
-
 # datos -------------------------------------------------------------------
 
-
-
-# browseURL("https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-05-30/readme.md")
+browseURL("https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-05-30/readme.md")
 
 centenarians <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-05-30/centenarians.csv')
 
-
-
+# selecciono la persona más longeva, Jeanne Calment
 jeanne <- centenarians |> 
   slice_max(order_by = age, n = 1) |> 
   mutate(y = 0, yend = 1) |> 
@@ -63,13 +56,16 @@ jeanne <- centenarians |>
   mutate(etq = format(fecha, "%d/%m/%Y")) |> 
   mutate(vjust = if_else(estado == "birth_date", 1, 0))
 
+# sitio de Wikipedia con una tabla con los presidentes argentinos y fechas
 link <- "https://es.wikipedia.org/wiki/Anexo%3APresidentes_de_la_Naci%C3%B3n_Argentina"
 
+# datos de los presidentes argentinos
 wi <- link %>%
   read_html() |> 
   html_element("table") %>%
   html_table()
 
+# limpio datos de presidentes argentinos
 pr <- wi |> 
   janitor::clean_names() |> 
   select(-1, -2) |> 
@@ -78,21 +74,26 @@ pr <- wi |>
   separate(col = presi, into = c("presi", NA), sep = "\\(") |> 
   separate(col = inicio, into = c("inicio", NA), sep = "\\[") |> 
   separate(col = fin, into = c("fin", NA), sep = "\\[") |> 
+  # el presidente actual no posee fecha 'fin'
   filter(presi != "Alberto Fernández") |> 
   mutate(across(.cols = c(inicio, fin), .fns = dmy)) 
 
+# filtro los datos de presidentes al intervalo de Jeanne Calment
 pr2 <- pr |> 
   filter(between(inicio, min(jeanne$fecha), max(jeanne$fecha))) |> 
   distinct() |> 
   mutate(fila = row_number()) |> 
   mutate()
 
+# divido los datos, presidentes pares a la izquierda
 pr2_izq <- pr2 |> 
   filter(fila %% 2 == 0)
 
+# divido los datos, presidentes impares a la derecha
 pr2_der <- pr2 |> 
   filter(fila %% 2 != 0)
 
+# figura ------------------------------------------------------------------
 
 g <- ggplot() +
   # horizontales c/25 años
@@ -125,24 +126,22 @@ g <- ggplot() +
     date_labels = "%Y",) +
   coord_cartesian(clip = "off") +
   labs(x = NULL, y = NULL, 
-       title = glue("Jeanne Calment vivió 122 años"),
+       title = "Jeanne Calment vivió 122 años",
        subtitle = glue(
-         "**Jeanne Calment** es considerada la persona más longeva de la historia. 
-         Nació en Francia en **1875** y falleció en **1997**. Para dar 
-         dimensión a su extensa vida, se muestran los **{nrow(pr2)}** 
-         presidentes argentinos (democráticos y de facto) que tuvimos durante este período."),
+         "**Jeanne Calment** es considerada la persona más longeva de la 
+         historia. Nació en Francia en **1875** y falleció en **1997**. Para dar 
+         dimensión a su extensa vida, se muestran los **{nrow(pr2)}** presidentes 
+         argentinos (democráticos y de facto) que tuvimos durante este período."),
        caption = mi_caption) +
   # tema
   theme(
     aspect.ratio = 1.95,
-    # plot.margin = margin(6.8, 10, 6.8, 10),
-    # plot.margin = margin(5, 17.35, 5, 17.35),
     plot.margin = margin(5, 29.5, 5, 29.5),
     plot.background = element_rect(
       fill = c1, color = c6, linewidth = 3),
     plot.title.position = "plot",
-    plot.title = element_text(
-      size = 52, color = c3, family = "libre", margin = margin(5, 0, 5, 0)),
+    plot.title = element_markdown(
+      size = 52, color = c3, family = "libre", margin = margin(5, 0, 5, 0), hjust = 0),
     plot.subtitle = element_textbox_simple(
       color = c2, size = 22, margin = margin(5, 0, 35, 7), family = "ubuntu"),
     plot.caption = element_markdown(
@@ -154,34 +153,13 @@ g <- ggplot() +
     axis.ticks = element_blank())
 
 # guardo
-ggsave(filename = "2023/semana_22/viz.png",
-       plot = g,
-       width = 30,
-       height = 58,
-       units = "cm",
-       dpi = 300)
+ggsave(
+  filename = "2023/semana_22/viz.png",
+  plot = g,
+  width = 30,
+  height = 58,
+  units = "cm",
+  dpi = 300)
 
 # abro
 browseURL("2023/semana_22/viz.png")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
