@@ -80,6 +80,7 @@ pr <- wi |>
 
 # filtro los datos de presidentes al intervalo de Jeanne Calment
 pr2 <- pr |> 
+  # filter(between(inicio, min(jeanne$fecha), max(jeanne$fecha))) |> 
   filter(between(inicio, min(jeanne$fecha), max(jeanne$fecha))) |> 
   distinct() |> 
   mutate(fila = row_number()) |> 
@@ -93,6 +94,9 @@ pr2_izq <- pr2 |>
 pr2_der <- pr2 |> 
   filter(fila %% 2 != 0)
 
+nic_ave <- pr |> 
+  filter(year(inicio) == 1874)
+
 # figura ------------------------------------------------------------------
 
 g <- ggplot() +
@@ -104,11 +108,6 @@ g <- ggplot() +
   geom_segment(
     aes(x = 0, xend = 0, y = ymd("1875-02-21"), yend = ymd("1997-08-04")),
     color = c4, linewidth = 3) +
-  # nacimiento/fallecimiento
-  geom_richtext(
-    data = jeanne, aes(x = 0, y = fecha, label = etq, vjust = vjust),
-    color = c3, fill = c4, size = 11, label.padding = unit(.4, "line"), 
-    label.color = NA, family = "ubuntu") +
   # presidentes
   geom_text_repel(
     data = pr2_der, aes(x = 0, y = inicio, label = presi), 
@@ -116,6 +115,14 @@ g <- ggplot() +
   geom_text_repel(
     data = pr2_izq, aes(x = 0, y = inicio, label = presi), 
     xlim = c(-2, -.1), size = 8, seed = 2023, family = "ubuntu", color = c3) +
+  geom_text_repel(
+    data = nic_ave, aes(x = 0, y = inicio, label = presi), 
+    xlim = c(-2, -.2), size = 8, seed = 2023, family = "ubuntu", color = c3) +
+  # nacimiento/fallecimiento
+  geom_richtext(
+    data = jeanne, aes(x = 0, y = fecha, label = etq, vjust = vjust),
+    color = c3, fill = c4, size = 11, label.padding = unit(.4, "line"), 
+    label.color = NA, family = "ubuntu") +
   # puntos presidentes sobre vertical central
   geom_point(data = pr2, aes(x = 0, y = inicio), color = "#ec7014", size = 2) +
   # ejes
