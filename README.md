@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 23
+
+Consumo energético argentino, y su comparación con los valores medios mundiales. En combustibles fósiles y renovables.
+
+[Script](2023/semana_22/2023-s23_script.R)
+
+![](2023/semana_23/viz.png)
+
 ## Semana 22
 
 La persona más longeva registrada, Jeanne Calment.
