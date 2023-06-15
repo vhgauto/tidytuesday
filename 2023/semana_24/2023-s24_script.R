@@ -78,11 +78,11 @@ tit <- "Granjas en África"
 
 # subtítulos
 sub1 <- glue(
-  "A partir de encuestas a granjeros en <b style='color:{c2}'>Tanzania</b> y 
-  <b style='color:{c2}'>Mozambique</b>, se 
+  "A partir de encuestas a <b>{length(unique(safi$key_ID))}</b> granjeros en 
+  <b style='color:{c2}'>Tanzania</b> y <b style='color:{c2}'>Mozambique</b>, se 
   recolectó informacón sobre los artículos que poseían en el hogar.")
 sub2 <- glue(
-  "Pueden observarse elementos tecnológicos, de transporte y trabajo campo.")
+  "Pueden observarse elementos tecnológicos, de transporte y trabajo de campo.")
 
 # figura
 g <- ggplot(data = d, aes(x = n, y = items_owned, fill = items_owned)) +
@@ -126,7 +126,8 @@ g <- ggplot(data = d, aes(x = n, y = items_owned, fill = items_owned)) +
       fill = c1, color = c2, linewidth = 3),
     plot.caption = element_markdown(
       color = c4, size = 12, family = "ubuntu", margin = margin(10, 0, 5, 0)),
-    panel.grid.major.x = element_line(color = c2, linewidth = .07),
+    panel.grid.major.x = element_line(
+      color = c2, linewidth = .07, linetype = "ff"),
     axis.text.x = element_text(
       size = 20, family = "inconsolata", color = c2),
     axis.text.y = element_blank(),
