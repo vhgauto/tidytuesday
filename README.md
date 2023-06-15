@@ -3,11 +3,19 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 24
+
+Encuestas a granjeros de Tanzania y Mozambique muestran sus pertenencias.
+
+[Script](2023/semana_24/2023-s24_script.R)
+
+![](2023/semana_24/viz.png)
+
 ## Semana 23
 
 Consumo energético argentino, y su comparación con los valores medios mundiales. En combustibles fósiles y renovables.
 
-[Script](2023/semana_22/2023-s23_script.R)
+[Script](2023/semana_23/2023-s23_script.R)
 
 ![](2023/semana_23/viz.png)
 
