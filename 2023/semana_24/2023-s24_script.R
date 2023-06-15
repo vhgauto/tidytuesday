@@ -113,7 +113,7 @@ g <- ggplot(data = d, aes(x = n, y = items_owned, fill = items_owned)) +
     hjust = 0, nudge_x = 3, color = c3, size = 6, family = "ubuntu") +
   # ejes
   labs(
-    x = "Cantidad de objetos", y = NULL, caption = mi_caption) +
+    x = "Cantidad", y = NULL, caption = mi_caption) +
   scale_x_continuous(
     limits = c(0, 100), expand = c(0, 0), breaks = seq(0, 100, 20)) +
   coord_cartesian(clip = "off") +
