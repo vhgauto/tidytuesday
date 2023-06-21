@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 25
+
+Nube de palabras a aprtir de las descripciones de avistamientos de OVNIs
+
+[Script](2023/semana_25/2023-s25_script.R)
+
+![](2023/semana_25/viz.png)
+
 ## Semana 24
 
 Encuestas a granjeros de Tanzania y Mozambique muestran sus pertenencias.
