@@ -3,9 +3,17 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 26
+
+Ubicación de sitios asociados a molinos en EE.UU.
+
+[Script](2023/semana_26/2023-s26_script.R)
+
+![](2023/semana_26/viz.png)
+
 ## Semana 25
 
-Nube de palabras a aprtir de las descripciones de avistamientos de OVNIs
+Nube de palabras a partir de las descripciones de avistamientos de OVNIs.
 
 [Script](2023/semana_25/2023-s25_script.R)
 
