@@ -19,7 +19,6 @@ c3 <- "white"
 # texto gral
 font_add_google(name = "Ubuntu", family = "ubuntu")
 # título
-font_add_google(name = "Bebas Neue", family = "bebas")
 font_add_google(name = "STIX Two Text", family = "stix")
 
 # íconos
@@ -40,7 +39,7 @@ mi_caption <- glue("{fuente} {sep} {autor} {sep} {icon_github} {icon_twitter} {u
 
 # datos -------------------------------------------------------------------
 
-browseURL("https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-07-04/readme.md")
+browseURL("https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-06-27/readme.md")
 us_place_names <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-06-27/us_place_names.csv')
 
 # más datos
@@ -106,12 +105,13 @@ molino <-("2023/semana_26/molino.svg")
 g <- ggplot() +
   geom_sf(data = eeuu_bb, fill = c2, color = NA) +
   geom_sf(data = d, color = c3, alpha = .6, size = .75, shape = 16) +
-  geom_from_path(aes(x = -2100000, y = -1700000, path = molino), width = .05) +
+  geom_from_path(aes(x = -2100000, y = -1600000, path = molino), width = .05) +
   annotate(
     geom = "richtext", x = -2200000, y = -2000000, 
     label = glue(
       "Cada punto representa la ubicación<br>de los {n_molinos}
-      molinos en **EE.UU.**<br>(territorio continental)."),
+      sitios en **EE.UU.**<br>asociados a **molinos**, en el<br>
+      territorio continental."),
     label.color = NA, color = c3, fill = NA, hjust = 0, family = "ubuntu", 
     size = 5) +
   coord_sf() +
@@ -128,13 +128,16 @@ g <- ggplot() +
       family = "stix", size = 36, color = c3, hjust = .5, 
       margin = margin(0, 0, -30, 0)),
     plot.caption = element_markdown(
-      color = c4, margin = margin(0, 10, 0, 0), family = "ubuntu")
-  ); ggsave(
+      color = c2, margin = margin(0, 10, 0, 0), family = "ubuntu"))
+
+# guardo
+ggsave(
     plot = g,
     filename = "2023/semana_26/viz.png",
     width = 30,
     height = 19,
     units = "cm",
-    dpi = 300
-  ); browseURL("2023/semana_26/viz.png")
+    dpi = 300)
 
+# abro
+browseURL("2023/semana_26/viz.png")
