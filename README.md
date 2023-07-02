@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 27
+
+En el estado de Texas, EE.UU., ubicación de sitios históricos relacionados con iglesias y cementerios.
+
+[Script](2023/semana_27/2023-s27_script.R)
+
+![](2023/semana_27/viz.png)
+
 ## Semana 26
 
 Ubicación de sitios asociados a molinos en EE.UU.
