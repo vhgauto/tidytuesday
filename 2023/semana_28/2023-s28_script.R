@@ -98,7 +98,6 @@ g <- ggplot(data = d, aes(x = year, y = j_d)) +
     family = "ubuntu", size = 7, hjust = 0, vjust = .5, fill = alpha(c1, .6),
     label.color = NA, color = c3) +
   # maual
-  scale_color_viridis_c(option = "inferno") +
   scale_fill_viridis_c(option = "inferno") +
   # ejes
   scale_x_continuous(breaks = seq(1800, 2020, 20)) +
