@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 28
+
+Valores de anomalía de temperatura de la superficie terrestre.
+
+[Script](2023/semana_28/2023-s28_script.R)
+
+![](2023/semana_28/viz.png)
+
 ## Semana 27
 
 En el estado de Texas, EE.UU., ubicación de sitios históricos relacionados con iglesias y cementerios.
