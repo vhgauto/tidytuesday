@@ -30,7 +30,7 @@ showtext_auto()
 showtext_opts(dpi = 300)
 
 # caption
-fuente <- glue("Datos: <span style='color:{c3};'><span style='font-family:mono;'>{{<b>tidytuesdayR</b>}}</span> semana 27, GISS Surface Temperature Analysis</span>")
+fuente <- glue("Datos: <span style='color:{c3};'><span style='font-family:mono;'>{{<b>tidytuesdayR</b>}}</span> semana 28, GISS Surface Temperature Analysis</span>")
 autor <- glue("Autor: <span style='color:{c3};'>**Víctor Gauto**</span>")
 icon_twitter <- glue("<span style='font-family:fa-brands;'>&#xf099;</span>")
 icon_github <- glue("<span style='font-family:fa-brands;'>&#xf09b;</span>")
