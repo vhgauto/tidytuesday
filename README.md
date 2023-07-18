@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 29
+
+Los detectores de IA tienen serias limitaciones en detectar texto escrito en inglés por quienes no son nativos del idioma.
+
+[Script](2023/semana_29/2023-s29_script.R)
+
+![](2023/semana_29/viz.png)
+
 ## Semana 28
 
 Valores de anomalía de temperatura de la superficie terrestre.
