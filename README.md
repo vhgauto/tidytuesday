@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 30
+
+Diferentes tratamientos para escorbuto, en un estudio clínico de 1757.
+
+[Script](2023/semana_30/2023-s30_script.R)
+
+![](2023/semana_30/viz.png)
+
 ## Semana 29
 
 Los detectores de IA tienen serias limitaciones en detectar texto escrito en inglés por quienes no son nativos del idioma.
