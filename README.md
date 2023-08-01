@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 31
+
+Porcentaje de superficie cubierta por agua en Estados de EEUU.
+
+[Script](2023/semana_31/2023-s31_script.R)
+
+![](2023/semana_31/viz.png)
+
 ## Semana 30
 
 Diferentes tratamientos para escorbuto, en un estudio clínico de 1757.
