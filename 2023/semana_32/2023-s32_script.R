@@ -81,21 +81,50 @@ scoville_tbl <- tibble(
     intensidad de un picante.<br>El valor más bajo (1) corresponde al 
     morrón verde."))
 
+# valores MIN y MAX de la escala Scoville
+d_min <- d |> 
+  slice_min(order_by = scoville, n = 1) |> 
+  mutate(label = glue("← {scoville}\nMIN"))
+
+d_max <- d |> 
+  slice_max(order_by = scoville, n = 1, with_ties = FALSE) |> 
+  mutate(label = gt::vec_fmt_number(
+    scoville, 
+    decimals = 0,
+    sep_mark = ".",
+    dec_mark = ",")) |> 
+  mutate(label = glue("{label} →\nMAX"))
+
 # figura
-g <- d |> 
-  ggplot(aes(sauce_number, scoville, color = sauce_number)) +
-  geom_jitter(width = .1, alpha = 1/1, size = 7, shape = 1) +
+g <- ggplot(data = d, aes(sauce_number, scoville, color = sauce_number)) +
+  # puntos
+  geom_point(alpha = 1/1, size = 7, shape = 1, 
+             position = position_jitter(width = .1, seed = 2023)) +
+  # logo
   geom_from_path(
     data = logo_tbl, aes(x, y, path = path),
     width = .4, inherit.aes = FALSE, hjust = 0, vjust = .5) +
+  # subtítulo
   geom_richtext(
     data = sub_tbl, aes(x, y, label = label), 
     label.color = NA, fill = NA, color = c4, family = "ubuntu", size = 6,
     hjust = 1, vjust = 1) +
+  # explicación escala Scoville
   geom_richtext(
     data = scoville_tbl, aes(x, y, label = label),
     label.color = NA, fill = NA, color = c3, family = "ubuntu", size = 5,
     hjust = 1, vjust = 1) +
+  # mínimo
+  geom_text(
+    data = d_min, aes(label = label), 
+    family = "victor", nudge_x = .6, size = 3.5, fontface = "bold", 
+    hjust = 1, vjust = .75) +
+  # máximo
+  geom_text(
+    data = d_max, aes(label = label), 
+    family = "victor", nudge_x = -1.3, size = 3.5, fontface = "bold",
+    hjust = 0, vjust = .6) +
+  # ejes
   scale_y_log10(
     labels = scales::label_number(big.mark = ".", decimal.mark = ","),
     limits = c(100, NA),
