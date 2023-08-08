@@ -169,4 +169,3 @@ ggsave(
 
 # abro
 browseURL("2023/semana_32/viz.png")
-
