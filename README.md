@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 32
+
+Distribución de intensidad del picante de las salsas de **Hot Ones**.
+
+[Script](2023/semana_32/2023-s32_script.R)
+
+![](2023/semana_32/viz.png)
+
 ## Semana 31
 
 Porcentaje de superficie cubierta por agua en Estados de EEUU.
