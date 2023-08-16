@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 33
+
+Distribución de elementos relacionados al dinero en e-mails considerados spam.
+
+[Script](2023/semana_33/2023-s33_script.R)
+
+![](2023/semana_33/viz.png)
+
 ## Semana 32
 
 Distribución de intensidad del picante de las salsas de **Hot Ones**.
