@@ -146,7 +146,7 @@ g <- d |>
   labs(
     title = mi_title,
     subtitle = mi_subt,
-    x = "Porcentaje del total de caracteres del e-mail",
+    x = "Porcentaje del total de caracteres del e-mail<br><span style='font-size:10pt'>*escala logarítmica*</span>",
     y = "Cantidad",
     color = "¿Es spam?    ",
     caption = mi_caption) +
@@ -187,7 +187,7 @@ ggsave(
   plot = g,
   filename = "2023/semana_33/viz.png",
   width = 30,
-  height = 18.64,
+  height = 19.17,
   units = "cm")
 
 # abro
