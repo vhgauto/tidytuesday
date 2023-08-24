@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 34
+
+Cantidad anual de refugiados que llegan y provienen de Argentina.
+
+[Script](2023/semana_34/2023-s34_script.R)
+
+![](2023/semana_34/viz.png)
+
 ## Semana 33
 
 Distribución de elementos relacionados al dinero en e-mails considerados spam.
