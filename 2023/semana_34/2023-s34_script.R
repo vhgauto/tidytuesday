@@ -88,7 +88,7 @@ eje_x_label <- tibble(xx = 10:22) |>
   pull(eje_x)
 
 # título y subtítulo
-mi_title <- "Refugiados de y desde Argentina"
+mi_title <- "Refugiados desde y en Argentina"
 
 mi_subtitle <- glue(
   "El **Alto Comisionado de la ONU para los Refugiados** (UNHCR)
