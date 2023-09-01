@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 35
+
+Veredictos de uso legítimo, por categorías, en EEUU.
+
+[Script](2023/semana_35/2023-s35_script.R)
+
+![](2023/semana_35/viz.png)
+
 ## Semana 34
 
 Cantidad anual de refugiados que llegan y provienen de Argentina.
