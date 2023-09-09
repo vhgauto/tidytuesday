@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 36
+
+Brecha de género entre diferentes grupos demográficos, en dólares/hora, en EEUU.
+
+[Script](2023/semana_36/2023-s36_script.R)
+
+![](2023/semana_36/viz.png)
+
 ## Semana 35
 
 Veredictos de uso legítimo, por categorías, en EEUU.
