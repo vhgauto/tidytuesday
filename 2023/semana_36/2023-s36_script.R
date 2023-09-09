@@ -33,7 +33,7 @@ showtext_auto()
 showtext_opts(dpi = 300)
 
 # caption
-fuente <- glue("Datos: <span style='color:{c3};'><span style='font-family:victor;'>{{<b>tidytuesdayR</b>}}</span> semana 36. Union Membership and Coverage Database</span>")
+fuente <- glue("Datos: <span style='color:{c3};'><span style='font-family:victor;'>{{<b>tidytuesdayR</b>}}</span> semana 36. Union Membership and Coverage Database. B. Hirsch, D. Macpherson, W. Even</span>")
 autor <- glue("Autor: <span style='color:{c3};'>**Víctor Gauto**</span>")
 icon_twitter <- glue("<span style='font-family:fa-brands;'>&#xf099;</span>")
 icon_github <- glue("<span style='font-family:fa-brands;'>&#xf09b;</span>")
@@ -187,11 +187,15 @@ g <- wrap_plots(g_lista, design = arreglo) +
       plot.caption = element_markdown(
         color = c5, family = "ubuntu", size = 13, margin = margin(10, 0, 5, 0)),
     )
-  ); ggsave(
-    plot = g,
-    filename = "2023/semana_36/viz.png",
-    width = 30,
-    height = 37,
-    units = "cm"
-  ); browseURL("2023/semana_36/viz.png")
+  )
 
+# guardo
+ggsave(
+  plot = g,
+  filename = "2023/semana_36/viz.png",
+  width = 30,
+  height = 37,
+  units = "cm")
+
+# abro
+browseURL("2023/semana_36/viz.png")
