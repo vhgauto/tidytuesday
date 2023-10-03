@@ -111,8 +111,8 @@ mi_tit <- "UN DÍA ARGENTINO"
 mi_sub <- glue(
   "Más de un tercio del día la pasamos<br>descansando y durmiendo.<br><br>
   Se comparan las horas dedicadas<br>
-  por <b style='color:{c3}'>argentinos</b> y el <b style='color:{c2}'>resto 
-  del mundo</b><br>en 10 actividades cotidianas seleccionadas.<br><br>
+  por <b style='color:{c3}'>argentinos</b> y el <b style='color:{c2}'>promedio
+  mundial</b><br>en 10 actividades cotidianas seleccionadas.<br><br>
   Se agregan los porcentajes que cada<br>
   actividad nos ocupa en el día.")
 
