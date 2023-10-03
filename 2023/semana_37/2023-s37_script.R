@@ -109,7 +109,7 @@ d2 <- d1 |>
 # título y subtítulo
 mi_tit <- "UN DÍA ARGENTINO"
 mi_sub <- glue(
-  "Dormimos más de un tercio del día.<br><br>
+  "Más de un tercio del día la pasamos<br>descansando y durmiendo.<br><br>
   Se comparan las horas dedicadas<br>
   por <b style='color:{c3}'>argentinos</b> y el <b style='color:{c2}'>resto 
   del mundo</b><br>en 10 actividades cotidianas seleccionadas.<br><br>
