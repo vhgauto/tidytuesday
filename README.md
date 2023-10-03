@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 37
+
+Día cotidiano argentino, comparado con el resto del mundo.
+
+[Script](2023/semana_37/2023-s37_script.R)
+
+![](2023/semana_37/viz.png)
+
 ## Semana 36
 
 Brecha de género entre diferentes grupos demográficos, en dólares/hora, en EEUU.
