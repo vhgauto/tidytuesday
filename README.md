@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 38
+
+Paquetes con nombre 'gg' y que dependen de ggplot2.
+
+[Script](2023/semana_38/2023-s38_script.R)
+
+![](2023/semana_38/viz.png)
+
 ## Semana 37
 
 Día cotidiano argentino, comparado con el resto del mundo.
