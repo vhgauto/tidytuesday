@@ -2,10 +2,6 @@
 # paquetes ----------------------------------------------------------------
 
 library(tidyverse)
-library(glue)
-library(ggtext)
-library(showtext)
-library(patchwork)
 
 # fuente ------------------------------------------------------------------
 
@@ -43,3 +39,25 @@ browseURL("https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/
 
 grants <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-10-03/grants.csv')
 grant_opportunity_details <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-10-03/grant_opportunity_details.csv')
+
+glimpse(grants)
+glimpse(grant_opportunity_details)
+
+grant_opportunity_details |> 
+  select(
+    original_closing_date_for_applications, 
+    current_closing_date_for_applications,
+    starts_with("category")) |> 
+  select(-category_explanation) |> 
+  drop_na(
+    original_closing_date_for_applications, 
+    current_closing_date_for_applications) |> 
+  pivot_longer(
+    cols = starts_with("category"), names_to = "cat", values_to = "valor") |> 
+  filter(valor) |> 
+  rename(
+    original = original_closing_date_for_applications,
+    current = current_closing_date_for_applications) |> 
+  mutate(cat = str_remove(cat, "category_")) |> 
+  ggplot(aes(original, current, color = cat)) +
+  geom_point()
