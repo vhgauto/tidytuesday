@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 39
+
+Cantidad de veces que los personajes de **Ted Lasso** dicen *fuck*.
+
+[Script](2023/semana_39/2023-s39_script.R)
+
+![](2023/semana_39/viz.png)
+
 ## Semana 38
 
 Paquetes con nombre 'gg' y que dependen de ggplot2.
