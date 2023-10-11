@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 40
+
+Oportunidades de subvención del Gobierno de EEUU.
+
+[Script](2023/semana_40/2023-s40_script.R)
+
+![](2023/semana_40/viz.png)
+
 ## Semana 39
 
 Cantidad de veces que los personajes de **Ted Lasso** dicen *fuck*.
