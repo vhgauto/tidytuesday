@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 41
+
+Universidades y cementerios embrujados en EEUU.
+
+[Script](2023/semana_41/2023-s41_script.R)
+
+![](2023/semana_41/viz.png)
+
 ## Semana 40
 
 Oportunidades de subvención del Gobierno de EEUU.
