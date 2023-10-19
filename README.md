@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 42
+
+Identificar el cuadrante emocional de las canciones de Taylor Swift.
+
+[Script](2023/semana_42/2023-s42_script.R)
+
+![](2023/semana_42/viz.png)
+
 ## Semana 41
 
 Universidades y cementerios embrujados en EEUU.
