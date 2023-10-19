@@ -19,11 +19,11 @@ c5 <- "grey10"
 # texto gral
 font_add_google(name = "Ubuntu", family = "ubuntu")
 # ejes, explicaciones
-font_add_google(name = "Victor Mono", family = "victor", db_cache = FALSE)
+font_add_google(name = "Victor Mono", family = "victor")
 # esquina (sentimientos)
-font_add_google(name = "Bebas Neue", family = "bebas", db_cache = FALSE)
+font_add_google(name = "Bebas Neue", family = "bebas")
 # Taylor Swift
-font_add_google(name = "Pattaya", family = "pattaya", db_cache = FALSE)
+font_add_google(name = "Pattaya", family = "pattaya")
 
 # íconos
 font_add("fa-brands", "icon/Font Awesome 6 Brands-Regular-400.otf")
@@ -57,7 +57,7 @@ taylor_all_songs <- readr::read_csv('https://raw.githubusercontent.com/rfordatas
 browseURL("https://medium.com/@gregory2/visualizing-gorillaz-in-r-how-to-analyze-artists-using-spotifyr-ebae3e05491b")
 
 # me interesa analizar todas las canciones (que pertenezcan a algún álbum),
-# de acuerdo a su valencia (positivadad) y energía (intensidad/actividad)
+# de acuerdo a su valencia (positividad) y energía (intensidad/actividad)
 # en base a esos dos parámetros, puedo establecer un plano de coordenadas
 # que tiene en las esquinas cuatro sentimientos: enojo, felicidad, tristeza y
 # tranquilidad
@@ -90,33 +90,31 @@ d <- taylor_all_songs |>
   mutate(album_name = str_to_upper(album_name))
 
 # canciones extremas de sentimientos
+# calculo la distancia entre los puntos y el centro del cuadrante
+# divido por cuadrante y obtengo un representante extremo por cada sentimiento
 # contenta
 d_contenta <- d |> 
   filter(between(valence, .5, 1) & between(energy, .5, 1)) |> 
-  mutate(distancia = sqrt(valence^2 + energy^2)) |> 
-  arrange(desc(distancia)) |> 
-  slice(1)
+  mutate(distancia = sqrt((valence - .5)^2 + (energy - .5)^2)) |> 
+  slice_max(order_by = distancia, n = 1)
 
 # enojada
 d_enojada <- d |> 
   filter(between(valence, 0, .5) & between(energy, .5, 1)) |> 
-  mutate(distancia = sqrt(valence^2 + energy^2)) |> 
-  arrange(desc(distancia)) |> 
-  slice(1)
+  mutate(distancia = sqrt((valence - .5)^2 + (energy - .5)^2)) |> 
+  slice_max(order_by = distancia, n = 1)
 
 # triste
 d_triste <- d |> 
   filter(between(valence, 0, .5) & between(energy, 0, .5)) |> 
-  mutate(distancia = sqrt(valence^2 + energy^2)) |> 
-  arrange(distancia) |> 
-  slice(1)
+  mutate(distancia = sqrt((valence - .5)^2 + (energy - .5)^2)) |> 
+  slice_max(order_by = distancia, n = 1)
 
 # tranquila
 d_tranquila <- d |> 
   filter(between(valence, .5, 1) & between(energy, 0, .5)) |> 
-  mutate(distancia = sqrt(valence^2 + energy^2)) |> 
-  arrange(distancia) |> 
-  slice(1)
+  mutate(distancia = sqrt((valence - .5)^2 + (energy - .5)^2)) |> 
+  slice_max(order_by = distancia, n = 1)
 
 # sentimientos extremos
 d_extremos <- bind_rows(d_contenta, d_enojada, d_triste, d_tranquila)
