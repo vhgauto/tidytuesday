@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 43
+
+Riesgo de padecer demencia, sordera y Parkinson.
+
+[Script](2023/semana_43/2023-s43_script.R)
+
+![](2023/semana_43/viz.png)
+
 ## Semana 42
 
 Identificar el cuadrante emocional de las canciones de Taylor Swift.
