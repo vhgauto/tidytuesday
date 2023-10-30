@@ -117,7 +117,7 @@ etq_tbl <- tibble(
 g_tit <- glue("Los años no vienen solos")
 g_sub <- glue(
   "A partir de los datos simulados de **100** pacientes, se<br>",
-  "muestra el riesgo (en %) de paceder <b style='color:{c6}'>demencia</b>, <br>",
+  "muestra el riesgo (en %) de padecer <b style='color:{c6}'>demencia</b>, <br>",
   "<b style='color:{c3}'>sordera</b> y <b style='color:{c2}'>Parkinson</b>, ",
   "para diferentes rangos de edad.")
 
