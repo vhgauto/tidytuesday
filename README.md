@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 44
+
+Historias verdaderas y falsas de [Snopes.com](https://www.snopes.com/).
+
+[Script](2023/semana_44/2023-s44_script.R)
+
+![](2023/semana_44/viz.png)
+
 ## Semana 43
 
 Riesgo de padecer demencia, sordera y Parkinson.
