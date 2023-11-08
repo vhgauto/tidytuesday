@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 45
+
+Participación femenina en las elecciones de EE.UU.
+
+[Script](2023/semana_45/2023-s45_script.R)
+
+![](2023/semana_45/viz.png)
+
 ## Semana 44
 
 Historias verdaderas y falsas de [Snopes.com](https://www.snopes.com/).
