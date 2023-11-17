@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 46
+
+Ventas per cápita por el festival Diwali.
+
+[Script](2023/semana_46/2023-s46_script.R)
+
+![](2023/semana_46/viz.png)
+
 ## Semana 45
 
 Participación femenina en las elecciones de EE.UU.
