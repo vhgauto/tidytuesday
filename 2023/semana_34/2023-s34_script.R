@@ -10,12 +10,12 @@ library(showtext)
 
 # fuente ------------------------------------------------------------------
 
-# colores, Nord, afternoon praire
-c1 <- "#C0D8D8"
-c2 <- "#E19600"
-c3 <- "#AF1900"
-c4 <- "#6078A8"
-c5 <- "grey30"
+# colores, MoMA, Koons
+c1 <- "#CC3A6A"
+c2 <- "#5DBBA3"
+c3 <- "#E9C063"
+c4 <- "#4A1910"
+c5 <- "#A41620"
 
 # texto gral
 font_add_google(name = "Ubuntu", family = "ubuntu")
