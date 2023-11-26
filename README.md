@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 47
+
+Eventos R-Ladies de Argentina.
+
+[Script](2023/semana_47/2023-s47_script.R)
+
+![](2023/semana_47/viz.png)
+
 ## Semana 46
 
 Ventas per cápita por el festival Diwali.
