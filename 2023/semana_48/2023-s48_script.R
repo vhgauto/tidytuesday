@@ -5,6 +5,7 @@ library(tidyverse)
 library(glue)
 library(ggtext)
 library(showtext)
+library(datardis)
 
 # fuente ------------------------------------------------------------------
 
@@ -50,8 +51,10 @@ mi_caption <- glue(
 
 browseURL("https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-11-28/readme.md")
 
-drwho_episodes <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-11-28/drwho_episodes.csv')
-drwho_writers <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-11-28/drwho_writers.csv')
+# guionistas & episodios
+drwho_writers
+drwho_episodes <- drwho_episodes |> 
+  mutate(rating = as.numeric(rating))
 
 # me interesa el rating que tiene los guionistas que más capítulos escribieron
 
@@ -153,4 +156,3 @@ ggsave(
 
 # abro
 browseURL("2023/semana_48/viz.png")
-
