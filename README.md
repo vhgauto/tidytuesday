@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 48
+
+Rating de los cuatro guionistas con mayor participación en Doctor Who.
+
+[Script](2023/semana_48/2023-s48_script.R)
+
+![](2023/semana_48/viz.png)
+
 ## Semana 47
 
 Eventos R-Ladies de Argentina.
