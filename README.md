@@ -3,6 +3,15 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 49
+
+Expectativa de vida al nacer en Argentina, y comparación con países similares
+en 1950 y 2020.
+
+[Script](2023/semana_49/2023-s49_script.R)
+
+![](2023/semana_49/viz.png)
+
 ## Semana 48
 
 Rating de los cuatro guionistas con mayor participación en Doctor Who.
