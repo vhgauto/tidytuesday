@@ -57,21 +57,36 @@ holiday_movies <- readr::read_csv('https://raw.githubusercontent.com/rfordatasci
 holiday_movie_genres <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-12-12/holiday_movie_genres.csv')
 
 # me interesa ver la distribución de calificaciones de IMDb, por género
-d <- holiday_movies |> 
+d_eng <- holiday_movies |> 
   select(-genres) |> 
   full_join(holiday_movie_genres, by = join_by(tconst)) |> 
   filter(title_type == "movie") |> 
   select(average_rating, genres) |> 
-  mutate(genres = fct_reorder(genres, average_rating)) |> 
+  mutate(genres = fct_reorder(genres, average_rating)) |>
   drop_na() |> 
   mutate(m = median(average_rating), .by = genres) |> 
-  mutate(n = n(), .by = genres)
+  mutate(n = n(), .by = genres) 
+
+# traducción de los géneros de las peículas
+generos_eng <- unique(d_eng$genres) |> sort()
+generos_esp <- c(
+  "Terror", "Thriller", "Misterio", "Acción", "Familiar", "Fantasía", "Comedia",
+  "Ciencia ficción", "Western", "Romántica", "Deportes", "Policial", "Aventura",
+  "Drama", "Musical", "Histórica", "Animada", "Bélica", "Música", "Noir", 
+  "Biografía", "Documental")
+
+names(generos_esp) <- generos_eng
+
+d <- d_eng |> 
+  mutate(genres = generos_esp[genres]) |> 
+  mutate(genres = fct_reorder(genres, average_rating))
 
 # películas con mejor puntuación, por género
 d_max <- holiday_movies |> 
   select(-genres) |> 
   full_join(holiday_movie_genres, by = join_by(tconst)) |> 
   filter(title_type == "movie") |> 
+  mutate(genres = generos_esp[genres]) |>
   mutate(genres = fct_reorder(genres, average_rating)) |> 
   select(primary_title, year, genres, average_rating) |> 
   drop_na() |> 
@@ -101,8 +116,7 @@ mi_sub <- glue(
   "Para cada género se indica la película con el mejor puntaje.")
 
 # figura
-g <- d |> 
-  ggplot(aes(average_rating, genres, group = genres)) +
+g <- ggplot(d, aes(average_rating, genres, group = genres)) +
   geom_richtext(
     data = d_max, aes(10.2, genres, label = label), hjust = 0, fill = NA, 
     label.color = NA) +
@@ -120,7 +134,7 @@ g <- d |>
     ticks.linewidth = 3/.pt, frame.linewidth = 1/.pt)) +
   theme_void() +
   theme(
-    plot.margin = margin(5, 280, 5, 5),
+    plot.margin = margin(8.6, 280, 8.6, 5),
     plot.background = element_rect(
       fill = c1, color = c2, linewidth = 3),
     plot.title = element_text(
