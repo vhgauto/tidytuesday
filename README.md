@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 50
+
+Calificaciones de películas navideñas, por género.
+
+[Script](2023/semana_50/2023-s50_script.R)
+
+![](2023/semana_50/viz.png)
+
 ## Semana 49
 
 Expectativa de vida al nacer en Argentina, y comparación con países similares
