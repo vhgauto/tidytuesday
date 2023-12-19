@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 51
+
+Relación entre popularidad y calificación en episodios de Navidad.
+
+[Script](2023/semana_51/2023-s51_script.R)
+
+![](2023/semana_51/viz.png)
+
 ## Semana 50
 
 Calificaciones de películas navideñas, por género.
