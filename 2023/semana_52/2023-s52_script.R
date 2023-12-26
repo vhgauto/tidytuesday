@@ -9,19 +9,22 @@ library(tidyverse)
 # fuente ------------------------------------------------------------------
 
 # colores
-c1 <- "#E1C59A"
-c2 <- "#E59A52"
+c1 <- "#E05E35"
+c2 <- "#AF141F"
 c3 <- "#F7BD6E"
-c4 <- "#094568"
+c4 <- "#EF9352"
+c5 <- "#FFE98C"
+c6 <- "#2E141E"
 
 # texto gral
 font_add_google(name = "Ubuntu", family = "ubuntu")
-# calificación IMDB
+# horas, días
 font_add_google(name = "Victor Mono", family = "victor", db_cache = FALSE)
+# títulos de eje, título
+font_add_google(name = "Source Serif 4", family = "source", db_cache = FALSE)
 
 # íconos
 font_add("fa-brands", "icon/Font Awesome 6 Brands-Regular-400.otf")
-font_add("fa-regular", "icon/Font Awesome 6 Free-Regular-400.otf")
 
 showtext_auto()
 showtext_opts(dpi = 300)
@@ -63,40 +66,7 @@ d <- cran_20221122 |>
   mutate(
     mes = format(fecha, "%B") |> str_to_upper(),
     dia = day(fecha)) |>
-  mutate(mes = fct_reorder(mes, month(fecha))) |>
-  mutate(rango = cut_width(n, width = 2))
-
-# d_max <- d |>
-#   slice_max(order_by = n, by = mes, n = 1)
-# 
-# g <- ggplot(d, aes(hora, dia, fill = rango)) +
-#   geom_raster(color = NA, linewidth = .5) +
-#   # geom_point(data = d_max, shape = 0, size = 5, color = "red", stroke = 1) +
-#   facet_wrap(vars(mes), nrow = 3, scales = "free") +
-#   scale_x_continuous(expand = c(0, 0), breaks = seq(0, 24, 1)) +
-#   scale_y_continuous(
-#     expand = c(0, 0), limits = c(.5, 31.5), breaks = seq(1, 31, 1)) +
-#   tidyterra::scale_fill_whitebox_d(palette = "bl_yl_rd") +
-#   # tidyterra::scale_fill_wiki_d() +
-#   coord_cartesian(clip = "off") +
-#   theme_void() +
-#   theme(
-#     plot.background = element_rect(fill = "black"),
-#     panel.grid = element_blank(),
-#     panel.background = element_rect(fill = "black"),
-#     axis.text.x = element_text(
-#       color = "white", family = "victor", hjust = .5, size = 8),
-#     axis.text.y = element_text(
-#       color = "white", family = "victor", hjust = 1, size = 10),
-#     legend.text = element_text(color = "white"),
-#     strip.text = element_text(color = "white", size = 15, family = "ubuntu")
-#   ); ggsave(
-#     plot = g,
-#     filename = "2023/semana_52/viz.png",
-#     width = 30,
-#     height = 30,
-#     units = "cm"
-#   ); browseURL("2023/semana_52/viz.png")
+  mutate(mes = fct_reorder(mes, month(fecha)))
 
 d_na <- d |> 
   complete(mes, dia, hora) |> 
@@ -105,55 +75,95 @@ d_na <- d |>
   mutate(fecha = ymd(glue("2020-{mes}-{dia}"))) |> 
   drop_na(fecha)
 
-mi_subtitle <- glue(
-  "Días y horas con nula actividad en **CRAN**, el repositorio central de ",
-  "<b style='font-family:victor;'>R</b>")
+# figura ------------------------------------------------------------------
 
-g2 <- ggplot(d_na, aes(hora, dia, fill = n)) +
-  geom_tile(color = "#E05E35", linewidth = .5) +
+# título y subtítulo
+mi_title <- glue("El descanso de <span style='color:white'>CRAN</span>")
+
+mi_subtitle <- glue(
+  "Días y horas con actividad nula en **CRAN**, el repositorio central de ",
+  "<b style='font-family:victor;'>R</b>. Durante la madrugada<br>",
+  "y a fin de año son los momentos en los que los ",
+  "desarrolladores no publican sus productos.")
+
+# función que agrega ceros delante de los números
+f_ceros <- function(x) {
+  if (nchar(x) == 1) {
+    y <- glue("0{x}")
+  } else {y <- glue("{x}")}
+  
+  return(as.character(y))
+}
+
+# valores de ejes
+rango_x <- seq(0, 24, 3)
+rango_y <- c(1, seq(3, 30, 3))
+
+# figura
+g <- ggplot(d_na, aes(hora, dia, fill = n)) +
+  geom_tile(color = c1, linewidth = .5) +
   facet_wrap(vars(mes), nrow = 3, scales = "free") +
   scale_x_continuous(
-    expand = c(0, 0), breaks = seq(0, 24, 4), 
+    expand = c(0, 0), breaks = rango_x, 
+    labels = list_c(map(rango_x, f_ceros)),
     sec.axis = dup_axis(guide = guide_axis(position = "top"))) +
   scale_y_continuous(
-    expand = c(0, 0), limits = c(.5, 31.5), breaks = c(1, seq(5, 30, 5)),
+    expand = c(0, 0), limits = c(.5, 31.5), breaks = rango_y,
+    labels = list_c(map(rango_y, f_ceros)),
     sec.axis = dup_axis()) +
-  scale_fill_gradient(low = "#AF141F", high = "#AF141F") +
+  scale_fill_gradient(low = c2, high = c2) +
   labs(
-    x = "Hora <span>→</span>", y = "↑\nDía", subtitle = mi_subtitle,
+    x = "Hora <span style='font-size:30pt'>→</span>", 
+    y = "<span style='font-size:30pt'>↑</span><br>Día", 
+    title = mi_title,
+    subtitle = mi_subtitle,
     caption = mi_caption) +
   coord_cartesian(clip = "off") +
   theme_void() +
   theme(
-    plot.background = element_rect(fill = "#2E141E"),
+    plot.background = element_rect(
+      fill = c6, color = scales::muted(c2, l = 2), linewidth = 3),
     plot.margin = margin(rep(10, 4)),
-    plot.subtitle = element_markdown(color = "#F7BD6E", family = "ubuntu"),
+    plot.title = element_markdown(
+      size = 75, family = "source", color = c5, hjust = .5),
+    plot.subtitle = element_markdown(
+      color = c3, family = "ubuntu", margin = margin(b = 15), size = 18, 
+      hjust = .5),
     plot.caption = element_markdown(
-      color = "#EF9352", family = "ubuntu", size = 10),
+      color = c4, family = "ubuntu", size = 12),
     panel.grid = element_blank(),
     panel.background = element_blank(),
-    panel.spacing = unit(.1, "line"),
+    panel.spacing.x = unit(0, "line"),
+    panel.spacing.y = unit(.3, "line"),
     panel.ontop = FALSE,
     legend.position = "none",
     axis.title.x.bottom = element_markdown(
-      hjust = 0, color = "#EF9352", size = 20, family = "serif", 
+      hjust = 0, color = c4, size = 20, family = "source", 
       margin = margin(t = 10)),
-    axis.title.y.left = element_text(
-      vjust = 0, color = "#EF9352", size = 20, family = "serif",
+    axis.title.y.left = element_markdown(
+      vjust = 0, color = c4, size = 20, family = "source",
       margin = margin(r = 10)),
-    axis.line = element_line(color = "#E05E35", linewidth = .5),
-    axis.text = element_text(
-      color = "#FFE98C", family = "victor", hjust = .5, size = 9),
+    axis.line = element_line(color = c1, linewidth = .5),
+    axis.text.x.bottom = element_text(
+      color = c5, family = "victor", hjust = .5, size = 11, 
+      margin = margin(t = 3)),
+    axis.text.y.left = element_text(
+      color = c5, family = "victor", hjust = .5, size = 11, 
+      margin = margin(r = 3, l = 3)),
     axis.text.x.top = element_blank(),
     axis.text.y.right = element_blank(),
-    strip.text = element_text(color = "#FFE98C", size = 25, family = "ubuntu"),
-    strip.placement = "outside"
-  ); ggsave(
-    plot = g2,
-    filename = "2023/semana_52/viz2.png",
-    width = 30,
-    height = 32,
-    units = "cm"
-  ); browseURL("2023/semana_52/viz2.png")
+    strip.text = element_text(
+      color = c5, size = 25, family = "ubuntu", margin = margin(b = 5),
+      hjust = 0),
+    strip.placement = "outside")
 
+# guardo
+ggsave(
+  plot = g,
+  filename = "2023/semana_52/viz.png",
+  width = 30,
+  height = 37,
+  units = "cm")
 
+# abro
+browseURL("2023/semana_52/viz.png")
