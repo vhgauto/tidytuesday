@@ -3,6 +3,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2023
 
+## Semana 52
+
+Días y horas sin 
+
+[Script](2023/semana_52/2023-s52_script.R)
+
+![](2023/semana_52/viz.png)
+
 ## Semana 51
 
 Relación entre popularidad y calificación en episodios de Navidad.
