@@ -5,7 +5,7 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 ## Semana 52
 
-Días y horas sin 
+Días y horas sin actividad en CRAN.
 
 [Script](2023/semana_52/2023-s52_script.R)
 
