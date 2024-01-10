@@ -185,10 +185,10 @@ g <- ggplot(d, aes(mes, porcent)) +
 # guardo
 ggsave(
   plot = g,
-  filename = "2024/s01/viz.png",
+  filename = "2024/s02/viz.png",
   width = 30,
   height = 30,
   units = "cm")
 
 # abro
-browseURL("2024/s01/viz.png")
+browseURL("2024/s02/viz.png")
