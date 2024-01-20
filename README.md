@@ -5,6 +5,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 3
+
+Lugares de votación en EE.UU., para cuatro elecciones.
+
+[Script](2024/s03/script.R)
+
+![](2024/s03/viz.png)
+
 ## Semana 2
 
 Diferencias en los meses de nacimientos en Canadá y NHL.
