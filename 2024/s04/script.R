@@ -60,6 +60,9 @@ english_education <- tuesdata$english_education
 
 # me interesa la relación entre los ingresos y el nivel educativo
 
+# descarga de los datos
+# https://www.ons.gov.uk/visualisations/dvc2651b/fig3/datadownload.xlsx
+
 # datos de logros educativos y privación en los ingresos, para ciudades de UK
 privacion <- readxl::read_xlsx("2024/s04/datadownload.xlsx", skip = 4) |> 
   rename(
@@ -81,6 +84,7 @@ tamaño_ciudad <- english_education |>
 # combino ambos datos
 d <- inner_join(privacion, tamaño_ciudad, by = join_by(town11cd))
 
+# ciudades min/max para señalar
 ciudad_max <- d |> 
   slice_max(educacion, n = 1) |> 
   mutate(ciudad = str_remove(ciudad, " BUASD")) |> 
@@ -90,7 +94,6 @@ ciudad_max <- d |>
     xend = educacion*.98,
     yend = ingreso,
     hjust = 1.1)
-
 
 ciudad_min <- d |> 
   slice_min(ingreso, n = 1) |> 
@@ -131,6 +134,7 @@ flecha_y <- tibble(
 
 flechas <- rbind(flecha_x, flecha_y)
 
+# subtítulo
 mi_subtitle <- glue(
   "En **Reino Unido**, Las ciudades con mayor nivel educativo tienen bajos ",
   "niveles de privación de ingresos.") |> 
@@ -182,8 +186,7 @@ g <- ggplot(d, aes(educacion, ingreso)) +
     panel.grid.major = element_line(linetype = "FF", linewidth = .3, color = c2),
     axis.title = element_text(family = "ubuntu", size = 18, color = c4),
     axis.text = element_text(family = "victor", size = 15, color = "black"),
-    axis.text.y = element_text(vjust = 0)
-    )
+    axis.text.y = element_text(vjust = 0))
 
 # guardo
 ggsave(
