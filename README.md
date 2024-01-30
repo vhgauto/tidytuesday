@@ -5,6 +5,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 5
+
+Marmotas que predicen el clima.
+
+[Script](2024/s05/script.R)
+
+![](2024/s05/viz.png)
+
 ## Semana 4
 
 Logros educativos y su relación con los ingresos, en Reino Unido.
