@@ -1,9 +1,18 @@
 # TidyTuesday
+
 Figuras generadas a partir de los datos publicados por [TidyTuesday](https://github.com/rfordatascience/tidytuesday#readme).
 
 [Figuras TidyTuesday 2023](2023/README.md)
 
 # 2024
+
+## Semana 6
+
+Mapa de Patrimonios de la Humanidad de UNESCO, inspirado en esta [figura](https://100.datavizproject.com/data-type/viz46/) de [1 dataset, 100 visualizations](https://100.datavizproject.com/).
+
+[Script](2024/s06/script.R)
+
+![](2024/s06/viz.png)
 
 ## Semana 5
 
