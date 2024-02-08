@@ -28,9 +28,6 @@ font_add(
   bold = "fuente/VictorMono-VariableFont_wght.ttf",
   italic = "fuente/VictorMono-ExtraLightItalic.ttf")
 
-# título
-font_add_google(name = "Miltonian", family = "miltonian")
-
 # íconos
 font_add("fa-brands", "icon/Font Awesome 6 Brands-Regular-400.otf")
 
