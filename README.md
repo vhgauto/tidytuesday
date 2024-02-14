@@ -6,6 +6,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 7
+
+Consumos durante **San Valentín** y cambio en el porcentaje de personas que participan.
+
+[Script](2024/s07/script.R)
+
+![](2024/s07/viz.png)
+
 ## Semana 6
 
 Mapa de Patrimonios de la Humanidad de UNESCO, inspirado en esta [figura](https://100.datavizproject.com/data-type/viz46/) de [1 dataset, 100 visualizations](https://100.datavizproject.com/).
