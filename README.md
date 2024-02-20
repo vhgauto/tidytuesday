@@ -6,6 +6,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 8
+
+Financiamiento de proyectos de [**R Consortium**](https://www.r-consortium.org/).
+
+[Script](2024/s08/script.R)
+
+![](2024/s08/viz.png)
+
 ## Semana 7
 
 Consumos durante **San Valentín** y cambio en el porcentaje de personas que participan.
