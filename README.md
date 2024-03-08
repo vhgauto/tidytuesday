@@ -6,6 +6,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 10
+
+Tendencias en la recolección de basura de [Mr. Trash Wheel](https://www.mrtrashwheel.com/).
+
+[Script](2024/s10/script.R)
+
+![](2024/s10/viz.png)
+
 ## Semana 9
 
 29 personas nacidas/muertas un 29 de febrero, de acuerdo al artículo de [Wikipedia](https://en.wikipedia.org/wiki/February_29) dedicado a la fecha.
