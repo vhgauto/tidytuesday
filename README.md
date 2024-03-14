@@ -6,6 +6,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 11
+
+Empresas con categoría **501(c)(3)**, por década.
+
+[Script](2024/s11/script.R)
+
+![](2024/s11/viz.png)
+
 ## Semana 10
 
 Tendencias en la recolección de basura de [Mr. Trash Wheel](https://www.mrtrashwheel.com/).
