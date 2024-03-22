@@ -6,6 +6,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 12
+
+Personajes de <b>X-Men</b> populares.
+
+[Script](2024/s12/script.R)
+
+![](2024/s12/viz.png)
+
 ## Semana 11
 
 Empresas con categoría **501(c)(3)**, por década.
