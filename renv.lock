@@ -673,14 +673,14 @@
     },
     "digest": {
       "Package": "digest",
-      "Version": "0.6.33",
+      "Version": "0.6.35",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "R",
         "utils"
       ],
-      "Hash": "b18a9cf3c003977b0cc49d5e76ebe48d"
+      "Hash": "698ece7ba5a4fa4559e3d537e7ec3d31"
     },
     "dplyr": {
       "Package": "dplyr",
@@ -985,6 +985,25 @@
         "yulab.utils"
       ],
       "Hash": "7dc7fbb9b794f93a7bd9dfe27f61ee3b"
+    },
+    "ggbump": {
+      "Package": "ggbump",
+      "Version": "0.1.99999",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "ggbump",
+      "RemoteUsername": "davidsjoberg",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "3aadf3dc3636a59b0075aa12ade8aaf33ab085f8",
+      "Requirements": [
+        "dplyr",
+        "ggplot2",
+        "magrittr",
+        "purrr",
+        "tidyr"
+      ],
+      "Hash": "90368a4468be899fd9a668b2545d32ea"
     },
     "ggflags": {
       "Package": "ggflags",
@@ -2696,16 +2715,16 @@
     },
     "stringi": {
       "Package": "stringi",
-      "Version": "1.8.1",
+      "Version": "1.8.3",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "R",
         "stats",
         "tools",
         "utils"
       ],
-      "Hash": "12bf57fdcb9b7068bea39b32f87ecac9"
+      "Hash": "058aebddea264f4c99401515182e656a"
     },
     "stringr": {
       "Package": "stringr",
@@ -2839,9 +2858,9 @@
     },
     "tidyselect": {
       "Package": "tidyselect",
-      "Version": "1.2.0",
+      "Version": "1.2.1",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "R",
         "cli",
@@ -2851,7 +2870,7 @@
         "vctrs",
         "withr"
       ],
-      "Hash": "79540e5fcd9e0435af547d885f184fd5"
+      "Hash": "829f27b9c4919c16b593794a6344d6c0"
     },
     "tidytext": {
       "Package": "tidytext",
