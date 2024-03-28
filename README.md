@@ -6,6 +6,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 13
+
+Expectativas e historial de la **Asociación Nacional Deportiva Universitaria**, en EE.UU.
+
+[Script](2024/s13/script.R)
+
+![](2024/s13/viz.png)
+
 ## Semana 12
 
 Personajes de <b>X-Men</b> populares.
