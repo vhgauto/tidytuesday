@@ -71,12 +71,12 @@ equipos_interes <- inner_join(
 
 # etiquetas de las rondas
 eje_x_label <- c(
-  "64<sup>avos</sup><br>|<br>|<br>|<br>|<br>|<br>|", 
-  "32<sup>avos</sup><br>|<br>|<br>|<br>|<br>|", 
-  "16<sup>avos</sup><br>|<br>|<br>|<br>|",
-  "8<sup>avos</sup><br>|<br>|<br>|", 
-  "4<sup>tos</sup><br>|<br>|",
-  "Final<br>|")
+  "32<sup>avos</sup><br>|<br>|<br>|<br>|<br>|<br>|", 
+  "16<sup>avos</sup><br>|<br>|<br>|<br>|<br>|", 
+  "8<sup>avos</sup><br>|<br>|<br>|<br>|",
+  "4<sup>tos</sup><br>|<br>|<br>|", 
+  "Semi<br>|<br>|",
+  "<span style='font-size:17px;'>Final</span>")
 
 # expectativas, en porcentajes
 d_expectativa <- public_picks |>
