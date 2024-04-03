@@ -28,7 +28,9 @@ font_add(
   italic = "fuente/VictorMono-ExtraLightItalic.ttf")
 
 # íconos
-font_add("fa-brands", "icon/Font Awesome 6 Brands-Regular-400.otf")
+font_add(
+  family = "jet", 
+  regular = "fuente/JetBrainsMonoNLNerdFontMono-Regular.ttf")
 
 showtext_auto()
 showtext_opts(dpi = 300)
@@ -39,10 +41,10 @@ fuente <- glue(
   "{{<b>tidytuesdayR</b>}}</span> semana {semana_numero}. ",
   "XXX fuente de datos XXX.</span>")
 autor <- glue("<span style='color:{c3};'>**Víctor Gauto**</span>")
-icon_twitter <- glue("<span style='font-family:fa-brands;'>&#xf099;</span>")
-icon_instagram <- glue("<span style='font-family:fa-brands;'>&#xf16d;</span>")
-icon_github <- glue("<span style='font-family:fa-brands;'>&#xf09b;</span>")
-icon_mastodon <- glue("<span style='font-family:fa-brands;'>&#xf4f6;</span>")
+icon_twitter <- glue("<span style='font-family:jet;'>&#xf099;</span>")
+icon_instagram <- glue("<span style='font-family:jet;'>&#xf16d;</span>")
+icon_github <- glue("<span style='font-family:jet;'>&#xf09b;</span>")
+icon_mastodon <- glue("<span style='font-family:jet;'>&#xf0ad1;</span>")
 usuario <- glue("<span style='color:{c3};'>**vhgauto**</span>")
 sep <- glue("**|**")
 
