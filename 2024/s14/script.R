@@ -59,7 +59,8 @@ dubois <- tuesdata$dubois_week10
 # traducción de las ocupaciones
 trabajos <- pull(dubois, Occupation)
 trabajos_trad <- c(
-  "profesores", "ministros", "gobierno", "negocios", "otros", "amas de casa")
+  "profesores", "ministros (iglesia)", "empleados estatales", "comerciantes", 
+  "otros", "amas de casa")
 
 names(trabajos_trad) <- trabajos
 
@@ -144,9 +145,14 @@ e_label <- e |>
   filter(y == max(y) & x == 1, .by = profesion) |> 
   mutate(y = y+1) |>
   mutate(label = map(toupper(profesion), \(x) f_label(x))) |> 
-  unnest(label)
+  unnest(label) |> 
+  # agrego enter en algunas profesiones, menos en 'amas de casa'
+  mutate(label = if_else(
+    profesion == trabajos_trad[6],
+    label,
+    str_replace_all(label, "> <", "><br><")
+  ))
 
-# browseURL("https://raw.githubusercontent.com/ajstarks/dubois-data-portraits/master/challenge/2024/challenge10/original-plate-37.jpg")
 
 # leyenda para indicar que cada ícono es una persona
 d_legend <- tibble(
@@ -211,7 +217,7 @@ g <- ggplot(e, aes(x, y)) +
   # profesiones
   geom_richtext(
     data = e_label, aes(.5, y, label = label), hjust = 0, family = "ubuntu",
-    size = 6, vjust = 0, fill = NA, label.color = NA, inherit.aes = FALSE) +
+    size = 5.5, vjust = 0, fill = NA, label.color = NA, inherit.aes = FALSE) +
   # leyenda
   geom_richtext(
     data = d_legend, aes(x, y, label = label), fill = NA, label.color = NA,
@@ -251,3 +257,6 @@ ggsave(
 
 # abro
 browseURL("2024/s14/viz.png")
+
+# figura original
+browseURL("https://raw.githubusercontent.com/ajstarks/dubois-data-portraits/master/challenge/2024/challenge10/original-plate-37.jpg")
