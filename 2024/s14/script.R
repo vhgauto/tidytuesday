@@ -157,8 +157,8 @@ e_label <- e |>
 # leyenda para indicar que cada ícono es una persona
 d_legend <- tibble(
   profesion = fct("amas de casa"),
-  y = 20,
-  x = 2,
+  y = 28,
+  x = 1,
   label = glue("{persona_icon} = 1 persona")
 )
 
@@ -169,9 +169,9 @@ mi_subtitle <- tibble(
   x = 1,
   label = glue(
     "<span style='color:{c1}'>",
-    "Ocupaciones de 330 personas negras graduadas<br>",
-    "de la <b>Universidad de Atlanta</b> en 1900, EE.UU.",
-    "</span>",
+    "Ocupaciones de 330 personas, descendientes de<br>",
+    "esclavos, graduadas de la <b>Universidad de Atlanta</b><br>",
+    "en 1900, EE.UU.</span>",
     "<br><br>",
     
     "<span style='color:{c2}'>",
@@ -195,9 +195,9 @@ bandera_txt <- paste(readLines(bandera_url), collapse = "\n")
 grid::grid.draw( svg_to_rasterGrob(bandera_txt) )
 
 mi_bandera <- tibble(
-  profesion = fct("otros"),
+  profesion = fct("empleados estatales"),
   y = 16,
-  x = 6
+  x = 3
 )
 
 # figura
@@ -221,7 +221,7 @@ g <- ggplot(e, aes(x, y)) +
   # leyenda
   geom_richtext(
     data = d_legend, aes(x, y, label = label), fill = NA, label.color = NA,
-    family = "jet", size = 4, color = c1, hjust = 0
+    family = "jet", size = 3, color = c1, hjust = 0
   ) +
   # subtítulo
   geom_richtext(
@@ -230,7 +230,7 @@ g <- ggplot(e, aes(x, y)) +
   ) +
   # bandera
   geom_point_svg(
-    data = mi_bandera, aes(x, y), svg = bandera_txt, size = 40, hjust = 0, 
+    data = mi_bandera, aes(x, y), svg = bandera_txt, size = 35, hjust = .5, 
     vjust = 1) + 
   facet_wrap(vars(profesion), nrow = 1) +
   scale_color_identity() +
