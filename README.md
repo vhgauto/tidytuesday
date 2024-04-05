@@ -6,6 +6,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 14
+
+Profesiones de personas negras graduadas en 1900 en la Universidad de Atlanta.
+
+[Script](2024/s14/script.R)
+
+![](2024/s14/viz.png)
+
 ## Semana 13
 
 Expectativas e historial de la **Asociación Nacional Deportiva Universitaria**, en EE.UU.
