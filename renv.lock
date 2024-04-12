@@ -1087,6 +1087,16 @@
       ],
       "Hash": "e82e0bef5e2db1243060afcb8be499ee"
     },
+    "ggnewscale": {
+      "Package": "ggnewscale",
+      "Version": "0.4.10",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "ggplot2"
+      ],
+      "Hash": "2fb8808f9b9b750371b6bfc4cc9f2939"
+    },
     "ggpath": {
       "Package": "ggpath",
       "Version": "1.0.1",
@@ -1227,6 +1237,27 @@
         "tidyr"
       ],
       "Hash": "4512013654d28dbf39dc4a8f5b9bdde2"
+    },
+    "ggsvg": {
+      "Package": "ggsvg",
+      "Version": "0.1.12",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "ggsvg",
+      "RemoteUsername": "coolbutuseless",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "c9d0d490be51602dafcf9fbcaf43be68d5b05085",
+      "Requirements": [
+        "ggplot2",
+        "glue",
+        "grid",
+        "rlang",
+        "rsvg",
+        "scales",
+        "stringr"
+      ],
+      "Hash": "41a1c7a626bae51510e1b8b3027372bf"
     },
     "ggtext": {
       "Package": "ggtext",
@@ -2524,6 +2555,13 @@
       "Repository": "CRAN",
       "Hash": "5564500e25cffad9e22244ced1379887"
     },
+    "rsvg": {
+      "Package": "rsvg",
+      "Version": "2.6.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "7aaf92c4adddc8a85696ae7f0123a725"
+    },
     "rvest": {
       "Package": "rvest",
       "Version": "1.0.3",
@@ -2871,6 +2909,27 @@
         "withr"
       ],
       "Hash": "829f27b9c4919c16b593794a6344d6c0"
+    },
+    "tidyterra": {
+      "Package": "tidyterra",
+      "Version": "0.5.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R",
+        "cli",
+        "data.table",
+        "dplyr",
+        "ggplot2",
+        "magrittr",
+        "rlang",
+        "scales",
+        "sf",
+        "terra",
+        "tibble",
+        "tidyr"
+      ],
+      "Hash": "11ecee46012db7475c840b498a07e8be"
     },
     "tidytext": {
       "Package": "tidytext",
