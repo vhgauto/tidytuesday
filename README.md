@@ -6,6 +6,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 15
+
+Ciudades alcanzadas total o parcialmente por los eclipses solares de 2023 y 2024, en EE.UU.
+
+[Script](2024/s15/script.R)
+
+![](2024/s15/viz.png)
+
 ## Semana 14
 
 Profesiones de personas negras graduadas en 1900 en la Universidad de Atlanta.
