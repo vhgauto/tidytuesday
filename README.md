@@ -6,6 +6,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 16
+
+Paquetes que dependen de <code>{ggplot2}</code>, asociados a <code>{shiny}</code>.
+
+[Script](2024/s16/script.R)
+
+![](2024/s16/viz.png)
+
 ## Semana 15
 
 Ciudades alcanzadas total o parcialmente por los eclipses solares de 2023 y 2024, en EE.UU.
