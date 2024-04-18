@@ -20,14 +20,7 @@ font_add(
   bold = "fuente/Ubuntu-Bold.ttf",
   italic = "fuente/Ubuntu-Italic.ttf")
 
-# fuente: Victor
-font_add(
-  family = "victor", 
-  regular = "fuente/VictorMono-ExtraLight.ttf",
-  bold = "fuente/VictorMono-VariableFont_wght.ttf",
-  italic = "fuente/VictorMono-ExtraLightItalic.ttf")
-
-# íconos
+# monoespacio & íconos
 font_add(
   family = "jet", 
   regular = "fuente/JetBrainsMonoNLNerdFontMono-Regular.ttf")
