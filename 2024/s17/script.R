@@ -37,7 +37,8 @@ showtext_opts(dpi = 300)
 fuente <- glue(
   "Datos: <span style='color:{col[3]};'><span style='font-family:mono;'>",
   "{{<b>tidytuesdayR</b>}}</span> semana {17}. ",
-  "**Our World in Data**</span>")
+  "Online Index of Objects Launched into Outer Space (ONU), ",
+  "Our World in Data</span>")
 autor <- glue("<span style='color:{col[3]};'>**Víctor Gauto**</span>")
 icon_twitter <- glue("<span style='font-family:jet;'>&#xf099;</span>")
 icon_instagram <- glue("<span style='font-family:jet;'>&#xf16d;</span>")
