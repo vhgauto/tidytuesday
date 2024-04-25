@@ -6,6 +6,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 17
+
+Lanzamientos de objetos espaciales por Argentina.
+
+[Script](2024/s17/script.R)
+
+![](2024/s17/viz.png)
+
 ## Semana 16
 
 Paquetes que dependen de <code>{ggplot2}</code>, asociados a <code>{shiny}</code>.
