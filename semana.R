@@ -76,7 +76,10 @@ nueva_semana <- function(semana_numero, año = 2024) {
     # write to new file
     writeLines(r_txt, con = new_file)
     
-    cat(blue(bold("\n\nArchivo R creado para semana {semana_numero}\n\n")))
+    cat(
+      blue(
+        bold(
+          glue("\n\nArchivo R creado para semana {semana_numero}\n\n"))))
     
   }
   
