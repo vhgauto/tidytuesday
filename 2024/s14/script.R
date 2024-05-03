@@ -183,7 +183,7 @@ mi_subtitle <- tibble(
     "<span style='color:{c3}'>",
     "La presente paleta de colores<br>",
     "corresponde a la <b>bandera panafricana</b>:",
-    "</span>",
+    "</span>"
     )
 )
 
