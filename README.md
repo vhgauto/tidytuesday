@@ -6,6 +6,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 18
+
+Edad media de los empleados públicos y privados, en el sector salud y educación, en Argentina.
+
+[Script](2024/s18/script.R)
+
+![](2024/s18/viz.png)
+
 ## Semana 17
 
 Lanzamientos de objetos espaciales por Argentina.
