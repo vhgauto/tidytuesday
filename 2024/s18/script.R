@@ -108,9 +108,9 @@ icon_circulo <- glue("<b style='font-family:jet; color:{c6};'>&#xeabc;</b>")
 
 # subtítulo
 mi_subtitle <- glue(
-  "En <b>Argentina</b>, entre {min(d$año)} y {max(d$año)}, aumentó la edad de ",
-  "los empleados en educación<br>",
-  "y salud, siendo los trabajadores ",
+  "En <b>Argentina</b>, entre {min(d$año)} y {max(d$año)}, aumentó la <b>edad ",
+  "promedio</b> de los empleados en<br>",
+  "educación y salud, siendo los trabajadores ",
   "<b style='color:{c5};'>públicos</b> ({icon_triangulo}) mayores que los ",
   "<b style='color:{c6};'>privados</b> ({icon_circulo})."
 )
