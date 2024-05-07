@@ -6,6 +6,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 19
+
+Semanas en el ranking de <b>Rolling Stone</b>, separados por género del álbum.
+
+[Script](2024/s19/script.R)
+
+![](2024/s19/viz.png)
+
 ## Semana 18
 
 Edad media de los empleados públicos y privados, en el sector salud y educación, en Argentina.
