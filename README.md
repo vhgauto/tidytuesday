@@ -6,6 +6,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 20
+
+¿Cuánto es lo máximo que pagaron por café? La respuesta varía según si la persona conoce o no el origen del café.
+
+[Script](2024/s20/script.R)
+
+![](2024/s20/viz.png)
+
 ## Semana 19
 
 Semanas en el ranking de <b>Rolling Stone</b>, separados por género del álbum.
