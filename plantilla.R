@@ -30,7 +30,7 @@ showtext_opts(dpi = 300)
 
 # caption
 fuente <- glue(
-  "Datos: <span style='color:{c3};'><span style='font-family:mono;'>",
+  "Datos: <span style='color:{c3};'><span style='font-family:jet;'>",
   "{{<b>tidytuesdayR</b>}}</span> semana {semana_numero}, ",
   "XXX fuente de datos XXX.</span>")
 autor <- glue("<span style='color:{c3};'>**Víctor Gauto**</span>")
