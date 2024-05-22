@@ -6,6 +6,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 21
+
+Proporción entre empresas estatales y privadas en la generación de CO<sub>2</sub>.
+
+[Script](2024/s21/script.R)
+
+![](2024/s21/viz.png)
+
 ## Semana 20
 
 ¿Cuánto es lo máximo que pagaron por café? La respuesta varía según si la persona conoce o no el origen del café.
