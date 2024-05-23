@@ -96,7 +96,7 @@ mi_subtitle <- glue(
   "Las empresas productoras de cemento, petróleo, gas y carbón son grandes<br>",
   " generadoras de CO<sub>2</sub>. Desde el s. XX, la proporción de las ",
   "emisiones causadas<br>por empresas <b style='color: {c4};'>estatales</b>",
-  " ha aumentado respecto de las empresas <b style='color: {c2};'>privadas</b>."
+  " ha aumentado respecto de las <b style='color: {c2};'>privadas</b>."
 )
 
 mi_label <- glue(
