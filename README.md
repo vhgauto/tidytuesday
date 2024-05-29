@@ -6,6 +6,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 22
+
+Plantaciones por lote y año del paquete <code>[{gardenR}](https://github.com/llendway/gardenR)</code>
+
+[Script](2024/s22/script.R)
+
+![](2024/s22/viz.png)
+
 ## Semana 21
 
 Proporción entre empresas estatales y privadas en la generación de CO<sub>2</sub>.
