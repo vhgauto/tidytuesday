@@ -845,6 +845,22 @@
       ],
       "Hash": "15aeb8c27f5ea5161f9f6a641fafd93a"
     },
+    "gardenR": {
+      "Package": "gardenR",
+      "Version": "1.0.0",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "gardenR",
+      "RemoteUsername": "llendway",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "7c7bde66ca6274cc08be2e4e7c02beee15b2f960",
+      "Requirements": [
+        "R",
+        "tibble"
+      ],
+      "Hash": "7716394385bd7c36bd7cec4ac49b1015"
+    },
     "gargle": {
       "Package": "gargle",
       "Version": "1.5.2",
