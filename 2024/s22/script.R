@@ -153,8 +153,6 @@ p <- rbind(p_2020, p_2021)
 # extensión de los lotes
 plot_bb <- st_as_sfc(st_bbox(plot_sf))
 
-# figura ------------------------------------------------------------------
-
 # cantidad de semillas plantadas por año
 n_año <- planting |> 
   reframe(
@@ -165,13 +163,15 @@ n_año <- planting |>
     label = glue("\\# de semillas plantadas = <b style='color:{c1}'>{s}</b>")
   )
 
+# figura ------------------------------------------------------------------
+
 # paleta de colores
 pal <- hcl.colors(
   n = length(unique(garden_coords$plot)), 
   palette = "Zissou 1") |> 
   sample()
 
-# subtítulo
+# título y subtítulo
 mi_subtitle <- glue(
   "El paquete <span style='font-family:jet; color:{c1}'>{{gardenR}}</span>, ",
   "de <b style='color:{c3}'>Lisa Lendway</b>, registra los vegetales de su ",
@@ -179,6 +179,10 @@ mi_subtitle <- glue(
   "Se muestran las plantaciones de 2020 y 2021 por cada lote, junto con los ",
   "nombres."
 )
+
+# logo de {gardenR}
+logo_url <- "https://raw.githubusercontent.com/llendway/gardenR/main/man/figures/logo.png"
+mi_title <- glue("<img src={logo_url} width=75 />")
 
 # figura
 g <- ggplot() +
@@ -206,14 +210,15 @@ g <- ggplot() +
   facet_wrap(vars(año), nrow = 1) +
   scale_fill_manual(values = pal) +
   scale_color_manual(values = pal) +
-  labs(subtitle = mi_subtitle, caption = mi_caption) +
+  labs(subtitle = mi_subtitle, caption = mi_caption, title = mi_title) +
   theme_void() +
   theme(
-    plot.margin = margin(t = 0, r = 20, b = 0, l = 20),
+    plot.margin = margin(t = 4.6, r = 20, b = 0, l = 20),
     plot.background = element_rect(fill = c4, color = c2, linewidth = 3),
+    plot.title = element_markdown(margin = margin(b = -70, l = 20, t = 10)),
     plot.subtitle = element_markdown(
       family = "ubuntu", size = 15, lineheight = unit(1.3, "line"),
-      margin = margin(b = 15, t = 10, l = 20)),
+      margin = margin(b = 40, t = 10, l = 130)),
     plot.caption = element_markdown(
       family = "ubuntu", color = c1, size = 11, lineheight = unit(1.3, "line"),
       margin = margin(b = 10, r = 20)),
@@ -226,7 +231,7 @@ ggsave(
   plot = g,
   filename = "2024/s22/viz.png",
   width = 30,
-  height = 23,
+  height = 25,
   units = "cm")
 
 # abro
