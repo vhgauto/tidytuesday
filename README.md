@@ -6,6 +6,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 23
+
+Máximo contenido graso de diferentes quesos por país.
+
+[Script](2024/s23/script.R)
+
+![](2024/s23/viz.png)
+
 ## Semana 22
 
 Plantaciones por lote y año del paquete <code>[{gardenR}](https://github.com/llendway/gardenR)</code>
