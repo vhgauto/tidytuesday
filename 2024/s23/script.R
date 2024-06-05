@@ -124,7 +124,7 @@ g <- ggplot(e, aes(fat_content, label, fill = fat_content)) +
   theme_void() +
   theme(
     aspect.ratio = 1.5,
-    plot.margin = margin(b = 10, r = 26.3, l = 26.3),
+    plot.margin = margin(b = 10, r = 26, l = 26, t = 2.5),
     plot.background = element_rect(fill = c5, color = c4, linewidth = 3),
     plot.title.position = "panel",
     plot.title = element_markdown(
