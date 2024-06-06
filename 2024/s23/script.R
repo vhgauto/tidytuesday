@@ -107,6 +107,7 @@ m <- median(e$fat_content)
 # figura
 g <- ggplot(e, aes(fat_content, label, fill = fat_content)) +
   geom_point(alpha = 1, size = 10, shape = 23, color = c5) +
+  geom_point(color = c5, alpha = 1, size = 4, shape = 21, fill = c4) +
   geom_label(
     aes(x = cheese_x,label = cheese, hjust = hjust, color = fat_content), 
     family = "ubuntu", size = 6, fill = c4, label.size = unit(0, "mm"),
