@@ -90,7 +90,8 @@ d <- federal_holidays |>
 
 # subtítulo
 mi_subtitulo <- glue(
-  "Feriados nacionales en <b>EE.UU.</b><br>",
+  "<span style='font-size:45px'>Feriados nacionales en ",
+  "<b style='color:{c1}'>EE.UU.</b></span><br><br>",
   "Se muestra el año en que se<br>",
   "estableció la fecha como tal.<br><br>",
   "Los feriados con fecha<br>",
