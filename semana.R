@@ -17,7 +17,7 @@ nueva_semana <- function(semana_numero, año = 2024) {
   new_file <- file.path(semana_carpeta, "script.R")
   
   # verifico que la carpeta de la semana no exista
-  semanas_ok <- list.files(glue("{año}")) |> 
+  semanas_ok <- list.files(glue::glue("{año}")) |> 
     stringr::str_remove("s") |> 
     as.numeric()
   
