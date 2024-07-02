@@ -6,6 +6,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 26
+
+Géneros de películas con temática LGBTQ.
+
+[Script](2024/s26/script.R)
+
+![](2024/s26/viz.png)
+
 ## Semana 25
 
 Feriados en EE.UU. y el año en que fueron establecidos.
