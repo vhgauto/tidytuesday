@@ -1089,6 +1089,26 @@
       ],
       "Hash": "012d7705b4cdc7b5ee89895aeefc1d45"
     },
+    "gglgbtq": {
+      "Package": "gglgbtq",
+      "Version": "0.2.0",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "gglgbtq",
+      "RemoteUsername": "turtletopia",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "f4d806f4c2cfdc6a94f04cbca1c8f5d3580ec9e0",
+      "Requirements": [
+        "R",
+        "ggplot2",
+        "grDevices",
+        "graphics",
+        "rlang",
+        "tibble"
+      ],
+      "Hash": "8a717f57cd4a57cacb73d8f1fecc3c25"
+    },
     "ggpath": {
       "Package": "ggpath",
       "Version": "1.0.1",
