@@ -6,6 +6,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 27
+
+Datos geográficos presentes en los datasets de TidyTuesday.
+
+[Script](2024/s27/script.R)
+
+![](2024/s27/viz.png)
+
 ## Semana 26
 
 Géneros de películas con temática LGBTQ.
