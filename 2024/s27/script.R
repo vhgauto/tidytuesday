@@ -59,7 +59,7 @@ tt_variables <- tuesdata$tt_variables
 # filtro por datos geográficos
 geo_tbl <- tt_variables |> 
   filter(
-    str_detect(variable, "^lat$|latitude|^lon$|longitude|lng|^long$")
+    str_detect(variable, "^lat$|latitude|^lon$|longitude|lng|^long$|coord")
   ) |> 
   distinct(dataset_name, year, week) |> 
   arrange(year, week) |> 
