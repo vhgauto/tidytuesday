@@ -1,8 +1,12 @@
+<span align="center">
+
 # TidyTuesday
+
+</span>
 
 Figuras generadas a partir de los datos publicados por [TidyTuesday](https://github.com/rfordatascience/tidytuesday#readme).
 
-[Figuras TidyTuesday 2023](2023/README.md)
+## [TidyTuesday 2023](2023/README.md)
 
 # 2024
 
