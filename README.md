@@ -10,6 +10,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 29
+
+Presencia en las tribunas de los partidos de <b>Fútbol Femenino Inglés</b>, indicando el equipo más popular por año.
+
+[Script](2024/s29/script.R)
+
+![](2024/s29/viz.png)
+
 ## Semana 28
 
 Paquetes y funciones más frecuentes en este repositorio, utilizando el paquete [`{funspotr}`](https://brshallo.github.io/funspotr/).
