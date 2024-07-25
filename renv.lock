@@ -998,6 +998,24 @@
       ],
       "Hash": "3d918732cc11f50bde1b02ef690ca68a"
     },
+    "ggarchery": {
+      "Package": "ggarchery",
+      "Version": "0.4.3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "dplyr",
+        "ggplot2",
+        "glue",
+        "grid",
+        "magrittr",
+        "purrr",
+        "rlang",
+        "tidyr"
+      ],
+      "Hash": "1b33c1841b31c3bef8cc80494d6facb2"
+    },
     "ggbump": {
       "Package": "ggbump",
       "Version": "0.1.0",
