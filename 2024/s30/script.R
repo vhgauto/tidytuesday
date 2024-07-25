@@ -131,20 +131,21 @@ d_season <- d |>
     .by = c(label, sube)
   )
 
+# 1er programa
+fecha_1 <- d |> 
+  slice(1) |> 
+  pull(fecha) |> 
+  format("%d de %B de %Y")
+
+fecha_1_label <- glue(
+  "El 1<sup>er</sup> programa se emite<br>",
+  "el {fecha_1}."
+)
+
 # figura ------------------------------------------------------------------
 
 # título de eje vertical y subtítulo
 titulo_y <- "Espectadores<br><span style='font-size:17px'>(en millones)</span>"
-# 
-# mi_subtitulo <- glue(
-#   "La popularidad de <b style='color:{c6}'>American Idol</b> tuvo su máximo en",
-#   "las temporadas <b>5</b> y <b>6</b>. Únicamente en 3 temporadas la",
-#   "audiencia <b style='color:{c1}'>aumentó</b> con el progreso de los",
-#   "episodios. En el resto los espectadores fueron",
-#   "<b style='color:{c2}'>a la baja</b>.",
-#   .sep = " "
-# )
-
 
 mi_subtitulo <- glue(
   "La popularidad de <b style='color:{c6}'>AMERICAN IDOL</b> tuvo su máximo en",
@@ -181,7 +182,14 @@ g <- ggplot(d2, aes(fecha, viewers_in_millions)) +
   ) +
   # American Idol logo
   geom_point_svg(
-  x = ymd(20210101),y = 40, svg = svg_txt, size = 45, hjust = 1, vjust = 1) +
+    x = ymd(20210101),y = 40, svg = svg_txt, size = 45, hjust = 1, vjust = 1) +
+  # 1er programa
+  annotate(
+    geom = "richtext", x = d_season$fecha[1]-months(5),
+    y = d_season$viewers_in_millions[1]-1, label = fecha_1_label, fill = c3,
+    label.color = NA, family = "ubuntu", size = 5, hjust = 0, vjust = 1,
+    color = c5
+  ) +
   scale_x_date(
     date_breaks = "1 year", date_labels = "'%y", position = "bottom",
     limits = ymd(20020101, 20210101), expand = c(0, 0)) +
