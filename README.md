@@ -10,6 +10,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 30
+
+Audiencia de <b>American Idol</b>.
+
+[Script](2024/s30/script.R)
+
+![](2024/s30/viz.png)
+
 ## Semana 29
 
 Presencia en las tribunas de los partidos de <b>Fútbol Femenino Inglés</b>, indicando el equipo más popular por año.
