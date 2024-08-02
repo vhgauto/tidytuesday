@@ -18,12 +18,14 @@ font_add(
   family = "ubuntu", 
   regular = "fuente/Ubuntu-Regular.ttf",
   bold = "fuente/Ubuntu-Bold.ttf",
-  italic = "fuente/Ubuntu-Italic.ttf")
+  italic = "fuente/Ubuntu-Italic.ttf"
+)
 
 # monoespacio & íconos
 font_add(
   family = "jet", 
-  regular = "fuente/JetBrainsMonoNLNerdFontMono-Regular.ttf")
+  regular = "fuente/JetBrainsMonoNLNerdFontMono-Regular.ttf"
+)
 
 showtext_auto()
 showtext_opts(dpi = 300)
@@ -32,7 +34,8 @@ showtext_opts(dpi = 300)
 fuente <- glue(
   "Datos: <span style='color:{c3};'><span style='font-family:jet;'>",
   "{{<b>tidytuesdayR</b>}}</span> semana {semana_numero}, ",
-  "XXX fuente de datos XXX.</span>")
+  "XXX fuente de datos XXX.</span>"
+)
 autor <- glue("<span style='color:{c3};'>**Víctor Gauto**</span>")
 icon_twitter <- glue("<span style='font-family:jet;'>&#xf099;</span>")
 icon_instagram <- glue("<span style='font-family:jet;'>&#xf16d;</span>")
@@ -43,7 +46,8 @@ sep <- glue("**|**")
 
 mi_caption <- glue(
   "{fuente}<br>{autor} {sep} {icon_github} {icon_twitter} {icon_instagram} ",
-  "{icon_mastodon} {usuario}")
+  "{icon_mastodon} {usuario}"
+)
 
 # datos -------------------------------------------------------------------
 
@@ -63,4 +67,4 @@ tuesdata <- tidytuesdayR::tt_load(año, semana_numero)
 #   units = "cm")
 
 # abro
-# browseURL("semana_carpeta/viz.png")
+# browseURL("{getwd()}/semana_carpeta/viz.png")

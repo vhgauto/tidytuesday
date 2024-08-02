@@ -21,12 +21,14 @@ font_add(
   family = "ubuntu", 
   regular = "fuente/Ubuntu-Regular.ttf",
   bold = "fuente/Ubuntu-Bold.ttf",
-  italic = "fuente/Ubuntu-Italic.ttf")
+  italic = "fuente/Ubuntu-Italic.ttf"
+)
 
 # monoespacio & íconos
 font_add(
   family = "jet", 
-  regular = "fuente/JetBrainsMonoNLNerdFontMono-Regular.ttf")
+  regular = "fuente/JetBrainsMonoNLNerdFontMono-Regular.ttf"
+)
 
 # Bebas Neue
 font_add(
@@ -47,7 +49,8 @@ showtext_opts(dpi = 300)
 fuente <- glue(
   "Datos: <span style='color:{c1};'><span style='font-family:jet;'>",
   "{{<b>tidytuesdayR</b>}}</span> semana {31}, ",
-  "Internet Movie Database.</span>")
+  "Internet Movie Database.</span>"
+)
 autor <- glue("<span style='color:{c1};'>**Víctor Gauto**</span>")
 icon_twitter <- glue("<span style='font-family:jet;'>&#xf099;</span>")
 icon_instagram <- glue("<span style='font-family:jet;'>&#xf16d;</span>")
@@ -58,7 +61,8 @@ sep <- glue("**|**")
 
 mi_caption <- glue(
   "{fuente}<br>{autor} {sep} {icon_github} {icon_twitter} {icon_instagram} ",
-  "{icon_mastodon} {usuario}")
+  "{icon_mastodon} {usuario}"
+)
 
 # datos -------------------------------------------------------------------
 
