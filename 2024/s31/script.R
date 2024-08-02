@@ -138,6 +138,7 @@ d_top <- d_trad |>
       "({year})</span>")
 )
 
+# título y subtítulo
 mi_titulo <- "Películas veraniegas"
 mi_subtitulo <- glue(
   "Género y puntaje de películas que tienen <span style='font-family: jet;",
@@ -145,12 +146,13 @@ mi_subtitulo <- glue(
   "Para cada género se indica la película con mejor valoración."
 )
 
+# eje horizontal con logo IMDb
 logo_imdb <- glue(
   "<span style='font-family:jet; font-size:90px'>&#xf2d8;</span>")
 titulo_x <- glue("Puntaje<br>{logo_imdb}")
 
-{
-  g <- ggplot(d_trad, aes(average_rating, generos)) +
+# figura
+g <- ggplot(d_trad, aes(average_rating, generos)) +
   geom_point(
     aes(fill = average_rating), alpha = .8, size = 5, shape = 23, 
     color = "black", stroke = .3
@@ -164,7 +166,8 @@ titulo_x <- glue("Puntaje<br>{logo_imdb}")
   scale_x_continuous(
     limits = c(.9, 10.1),
     breaks = 1:10,
-    expand = c(0, 0)) +
+    expand = c(0, 0)
+  ) +
   scale_fill_gradient2(
     low = c1,
     mid = c2,
@@ -175,7 +178,8 @@ titulo_x <- glue("Puntaje<br>{logo_imdb}")
   coord_cartesian(clip = "off") +
   labs(
     title = mi_titulo, subtitle = mi_subtitulo, x = titulo_x, y = NULL,
-    caption = mi_caption) +
+    caption = mi_caption
+  ) +
   theme_minimal() +
   theme(
     aspect.ratio = 2.2,
@@ -210,31 +214,15 @@ titulo_x <- glue("Puntaje<br>{logo_imdb}")
     axis.text.y = element_text(family = "bebas", size = 30, color = c4),
     axis.ticks = element_blank(),
     legend.position = "none"
-  ); ggsave(
-    plot = g,
-    filename = "2024/s31/viz.png",
-    width = 30,
-    height = 43,
-    units = "cm")
-
-}
-
-browseURL(glue("{getwd()}/2024/s31/viz.png"))
-
-# 
-
-# figura ------------------------------------------------------------------
-
-# figura
-# g <- ggplot()
+)
 
 # guardo
-# ggsave(
-#   plot = g,
-#   filename = "2024/s31/viz.png",
-#   width = 30,
-#   height = 30,
-#   units = "cm")
+ggsave(
+  plot = g,
+  filename = "2024/s31/viz.png",
+  width = 30,
+  height = 43,
+  units = "cm")
 
 # abro
-# browseURL("2024/s31/viz.png")
+browseURL(glue("{getwd()}/2024/s31/viz.png"))
