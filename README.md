@@ -10,6 +10,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 31
+
+Puntaje de películas con `summer` en el título, y la mejor calificada por género.
+
+[Script](2024/s31/script.R)
+
+![](2024/s31/viz.png)
+
 ## Semana 30
 
 Audiencia de <b>American Idol</b>.
