@@ -10,6 +10,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 32
+
+Participación de Argentina en los Juegos Olímpicos.
+
+[Script](2024/s32/script.R)
+
+![](2024/s32/viz.png)
+
 ## Semana 31
 
 Puntaje de películas con `summer` en el título, y la mejor calificada por género.
