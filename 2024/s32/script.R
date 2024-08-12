@@ -155,26 +155,26 @@ mi_subtitle <- glue(
   "{f_icon(c4)} señala la obtención de una medalla.",
   .sep = " "
 )
-
 # figura
 g <- ggplot(arg_part, aes(x_part, y_part)) +
   geom_tile(fill = c1, color = c2, linewidth = 2) +
   geom_tile(
-    data = arg_med, aes(x = x_med, y = y_med), fill = c4, , color = c2, 
+    data = arg_med, aes(x = x_med, y = y_med), fill = c4, , color = c2,
     linewidth = 2
   ) +
   # medallas DORADA, PLATEADA, BRONZE
   geom_richtext(
-    data = arg_r, aes(largo+.5, filas+1.5, label = label), family = "jet",
-    hjust = 1, fill = c5,, label.color = NA, vjust = 1, size = 4,
-    # label.padding = unit(1, "mm"), 
+    data = arg_r, aes(largo + .5, filas + 1.5, label = label), family = "jet",
+    hjust = 1, fill = c5, , label.color = NA, vjust = 1, size = 4,
+    # label.padding = unit(1, "mm"),
     label.padding = unit(c(1, 1, .1, 1), "mm"),
     label.r = unit(0, "mm")
   ) +
   facet_wrap(vars(year), ncol = 4) +
   coord_equal(
-    expand = FALSE, xlim = c(.25, largo+.75),  ylim = c(.25, filas+1.8),
-    clip = "off") +
+    expand = FALSE, xlim = c(.25, largo + .75), ylim = c(.25, filas + 1.8),
+    clip = "off"
+  ) +
   labs(subtitle = mi_subtitle, caption = mi_caption_jjoo) +
   theme_void() +
   theme(
@@ -193,12 +193,12 @@ g <- ggplot(arg_part, aes(x_part, y_part)) +
     panel.spacing.x = unit(1, "line"),
     axis.ticks = element_blank(),
     axis.text = element_blank(),
-    strip.background = element_blank(), 
+    strip.background = element_blank(),
     strip.text = element_markdown(
       size = 28, color = c4, family = "bebas", margin = margin(t = 5, b = 2),
       hjust = 0
     )
-)
+  )
 
 # guardo
 ggsave(
