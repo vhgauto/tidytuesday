@@ -67,4 +67,4 @@ tuesdata <- tidytuesdayR::tt_load(año, semana_numero)
 #   units = "cm")
 
 # abro
-# browseURL("{getwd()}/semana_carpeta/viz.png")
+# browseURL(glue("{getwd()}/semana_carpeta/viz.png"))
