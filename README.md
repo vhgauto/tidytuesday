@@ -10,6 +10,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 33
+
+Ferias Internacionales y la relación entre asistentes y superficie.
+
+[Script](2024/s33/script.R)
+
+![](2024/s33/viz.png)
+
 ## Semana 32
 
 Participación de Argentina en los Juegos Olímpicos.
