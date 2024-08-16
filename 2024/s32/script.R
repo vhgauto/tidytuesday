@@ -11,8 +11,8 @@ library(tidyverse)
 
 # colores
 c1 <- "#2B579A"
-c2 <- colorspace::lighten(c1, .5)
-c3 <- colorspace::lighten(c1, .8)
+c2 <- colorspace::lighten(c1, .7)
+c3 <- colorspace::lighten(c1, .9)
 c4 <- "#A41620"
 c5 <- "white"
 
@@ -117,9 +117,10 @@ arg_med <- olympics |>
   unnest(cols = c(x_med, y_med)) |> 
   mutate(year = glue("{year} {bandera}"))
 
-f_icon <- function(x) {
+# función que devuelve ícono del color y tamaño deseado
+f_icon <- function(color, tamaño = 40) {
   glue(
-    "<span style='font-family:jet; color: {x}; font-size: 20px'>",
+    "<span style='font-family:jet; color: {color}; font-size: {tamaño}px'>",
     "&#xf0764;</span>")
 }
 
@@ -133,7 +134,7 @@ arg_r <- olympics |>
   count(year, medal, col) |> 
   arrange(year, col) |> 
   mutate(
-    l = glue("{f_icon(col)} {n}")
+    l = glue("{f_icon(col, 20)} {n}")
   ) |> 
   reframe(
     label = str_flatten(l, collapse = " "),
@@ -150,8 +151,8 @@ mi_caption_jjoo <- glue("{jjoo}<br>{mi_caption}")
 # subtítulo
 mi_subtitle <- glue(
   "Desempeño de <b style='color: {c1}'>Argentina</b> en los",
-  "<b style='font-family: jet; color: {c4}'>Juegos Olímpicos</b>.",
-  "<br>{f_icon(c1)} indica participación en un evento.",
+  "<b style='font-family: jet; color: {c4}'>Juegos Olímpicos</b>.<br>",
+  "{f_icon(c1)} indica participación en un evento.",
   "{f_icon(c4)} señala la obtención de una medalla.",
   .sep = " "
 )
@@ -166,7 +167,6 @@ g <- ggplot(arg_part, aes(x_part, y_part)) +
   geom_richtext(
     data = arg_r, aes(largo + .5, filas + 1.5, label = label), family = "jet",
     hjust = 1, fill = c5, , label.color = NA, vjust = 1, size = 4,
-    # label.padding = unit(1, "mm"),
     label.padding = unit(c(1, 1, .1, 1), "mm"),
     label.r = unit(0, "mm")
   ) +
@@ -178,7 +178,7 @@ g <- ggplot(arg_part, aes(x_part, y_part)) +
   labs(subtitle = mi_subtitle, caption = mi_caption_jjoo) +
   theme_void() +
   theme(
-    plot.margin = margin(l = 30.3, r = 30.3, t = 10),
+    plot.margin = margin(l = 30.8, r = 30.8, t = 10),
     plot.background = element_rect(fill = c3, color = c2, linewidth = 3),
     plot.title = element_markdown(),
     plot.subtitle = element_textbox_simple(
