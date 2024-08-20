@@ -10,6 +10,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 34
+
+Edades de reyes/reinas ingleses comparados con sus consortes.
+
+[Script](2024/s34/script.R)
+
+![](2024/s34/viz.png)
+
 ## Semana 33
 
 Ferias Internacionales y la relación entre asistentes y superficie.
