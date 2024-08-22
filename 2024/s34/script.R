@@ -146,11 +146,11 @@ d_ext <- bind_rows(d_max, d_min) |>
 corona <- glue("<span style='font-family:jet;'>&#xe26e;</span>")
 
 mi_subtitulo <- glue(
-  "Los <b style='color: {c3}'>monarcas ingleses</b> en general siempre fueron ",
-  "de mayor edad que sus<br>",
+  "Los <b style='color: {c3}'>monarcas ingleses</b> en general siempre ",
+  "mayores que sus<br>",
   "consortes. Puntos por encima de la diagonal a <b>45°</b> representan ",
-  "matrimonios<br>",
-  "en los que el Rey/Reina son mayores que su pareja."
+  "<br>",
+  "matrimonios en los que el Rey/Reina son mayores que su pareja."
 )
 
 # ícono de rey/reina del ajedrez sobre la leyenda
@@ -204,12 +204,12 @@ g <- ggplot(
     plot.margin = margin(r = 35.6, l = 35),
     plot.background = element_rect(fill = c5, color = c3, linewidth = 3),
     plot.title = element_markdown(
-      color = c3, size = 140, margin = margin(b = -100, t = -10)
+      color = c3, size = 140, margin = margin(b = -100, t = -10, l = 50)
     ),
     plot.title.position = "plot",
     plot.subtitle = element_markdown(
       family = "ubuntu", color = c8, size = 18, lineheight = unit(1.2, "line"),
-      margin = margin(b = 50, l = 100)
+      margin = margin(b = 50, l = 170)
     ),
     plot.caption = element_markdown(
       family = "ubuntu", size = 13, color = c2, margin = margin(t = 20, b = 10),
