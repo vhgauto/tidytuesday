@@ -10,6 +10,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 35
+
+Popularidad y puntaje de episodios de los <b>Power Rangers</b>, dividido entr las primeras y las últimas cinco temporadas.
+
+[Script](2024/s35/script.R)
+
+![](2024/s35/viz.png)
+
 ## Semana 34
 
 Edades de reyes/reinas ingleses comparados con sus consortes.

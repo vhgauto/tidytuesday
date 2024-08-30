@@ -56,7 +56,7 @@ nueva_semana <- function(semana_numero, año = 2024) {
     file.create(new_file)
     
     # copy lines to .R file
-    r_txt <- readLines("plantilla.R")
+    r_txt <- readLines("_plantilla.R")
     
     # replace placeholder text with variables
     r_txt <- gsub(
