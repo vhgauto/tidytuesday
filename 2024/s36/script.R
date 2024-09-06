@@ -187,7 +187,7 @@ names(question_trad) <- sort(unique(d$question))
 mi_subtitulo <- glue(
   "Qué opinan los usuarios ",
   "<b style='color: {c3}; font-family: ibm;'>ARGENTINOS</b> de ",
-  "stack<b>overflow</b> acerca<br>de la Inteligencia Artificial."
+  "stack <b>overflow</b> acerca<br>de la Inteligencia Artificial."
 )
 
 # figura
@@ -258,4 +258,3 @@ ggsave(
 
 # abro
 browseURL(glue("{getwd()}/2024/s36/viz.png"))
-
