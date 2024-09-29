@@ -10,6 +10,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 37
+
+Diferencia entre los ingresos a Universidades de Elite, comparado con Universidades públicas, según los ingresos en el hogar.
+
+[Script](2024/s37/script.R)
+
+![](2024/s37/viz.png)
+
 ## Semana 36
 
 Opiniones de usuarios de Argentina en stack<b>overflow</b> respecto de la Inteligencia Artificial.
