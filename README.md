@@ -10,6 +10,22 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 39
+
+Líneas habladas por los personajes principales en tres obras de William Shakespeare.
+
+[Script](2024/s39/script.R)
+
+![](2024/s39/viz.png)
+
+## Semana 38
+
+Distribución de los estudiantes de Universidades Élite y Públicas, según los ingresos de las familias.
+
+[Script](2024/s38/script.R)
+
+![](2024/s38/viz.png)
+
 ## Semana 37
 
 Diferencia entre los ingresos a Universidades de Elite, comparado con Universidades públicas, según los ingresos en el hogar.
