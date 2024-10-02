@@ -85,9 +85,8 @@ eje_x <- glue(
 )
 
 eje_y <- glue(
-  "Ingresos en el hogar,",
-  "según el percentil en la",
-  "distribución de ingresos",
+  "Percentil de ingresos",
+  "en el hogar",
   .sep = "<br>"
 )
 
