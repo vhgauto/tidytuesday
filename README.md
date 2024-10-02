@@ -12,7 +12,7 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 ## Semana 39
 
-Líneas habladas por los personajes principales en tres obras de William Shakespeare.
+Participación Argentina en las Olimpiadas de Matemáticas Internacionales.
 
 [Script](2024/s39/script.R)
 
@@ -20,7 +20,7 @@ Líneas habladas por los personajes principales en tres obras de William Shakesp
 
 ## Semana 38
 
-Distribución de los estudiantes de Universidades Élite y Públicas, según los ingresos de las familias.
+Líneas habladas por los personajes principales en tres obras de William Shakespeare.
 
 [Script](2024/s38/script.R)
 
