@@ -10,6 +10,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 40
+
+Duración y cantidad de turnos en el ajedrez.
+
+[Script](2024/s40/script.R)
+
+![](2024/s40/viz.png)
+
 ## Semana 39
 
 Participación Argentina en las Olimpiadas de Matemáticas Internacionales.
