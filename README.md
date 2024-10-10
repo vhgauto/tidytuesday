@@ -10,6 +10,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 41
+
+Especies nativas y no nativas en Parques Nacionales de EE.UU.
+
+[Script](2024/s41/script.R)
+
+![](2024/s41/viz.png)
+
 ## Semana 40
 
 Duración y cantidad de turnos en el ajedrez.
