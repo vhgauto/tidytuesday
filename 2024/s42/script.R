@@ -78,14 +78,14 @@ bb <- (ext(orcas_sf)*1.2) |>
 
 dem <- elevatr::get_elev_raster(
   locations = sf::st_as_sf(bb),
-  z = 11,
+  z = 10,
   clip = "bbox"
 ) |> 
   rast()
 
 # guardo ráster
-writeRaster(dem, "2024/s42/dem_11.tif", overwrite = TRUE)
-dem <- rast("2024/s42/dem_11.tif")
+writeRaster(dem, "2024/s42/dem.tif", overwrite = FALSE)
+dem <- rast("2024/s42/dem.tif")
 
 # figura ------------------------------------------------------------------
 
