@@ -10,7 +10,6 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
-<<<<<<< HEAD
 ## Semana 42
 
 Avistamiento de orcas en el Mar de los Salish.
@@ -19,8 +18,6 @@ Avistamiento de orcas en el Mar de los Salish.
 
 ![](2024/s42/viz.png)
 
-=======
->>>>>>> d3f131879f59a0436f382c95dfe9c7d729fe1ee9
 ## Semana 41
 
 Especies nativas y no nativas en Parques Nacionales de EE.UU.
