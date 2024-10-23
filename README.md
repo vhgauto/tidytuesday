@@ -10,6 +10,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 43
+
+Posición Argentina en superficie, acceso a internet, población y expectativa de vida.
+
+[Script](2024/s43/script.R)
+
+![](2024/s43/viz.png)
+
 ## Semana 42
 
 Avistamiento de orcas en el Mar de los Salish.
