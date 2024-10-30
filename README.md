@@ -10,6 +10,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 44
+
+Palabras anteriores y posteriores a los títulos de películas de <b>MONSTRUOS</b>.
+
+[Script](2024/s44/script.R)
+
+![](2024/s44/viz.png)
+
 ## Semana 43
 
 Posición Argentina en superficie, acceso a internet, población y expectativa de vida.
