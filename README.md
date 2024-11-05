@@ -10,6 +10,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 45
+
+Porcentaje de democracias, presidencias y monarquías.
+
+[Script](2024/s45/script.R)
+
+![](2024/s45/viz.png)
+
 ## Semana 44
 
 Palabras anteriores y posteriores a los títulos de películas de <b>MONSTRUOS</b>.
