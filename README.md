@@ -10,6 +10,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 46
+
+Códigos ISO 3166-1 de 3 letras que son iguales al inicio del nombre del país, en inglés.
+
+[Script](2024/s46/script.R)
+
+![](2024/s46/viz.png)
+
 ## Semana 45
 
 Porcentaje de democracias, presidencias y monarquías.
