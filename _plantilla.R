@@ -41,12 +41,13 @@ icon_twitter <- glue("<span style='font-family:jet;'>&#xf099;</span>")
 icon_instagram <- glue("<span style='font-family:jet;'>&#xf16d;</span>")
 icon_github <- glue("<span style='font-family:jet;'>&#xf09b;</span>")
 icon_mastodon <- glue("<span style='font-family:jet;'>&#xf0ad1;</span>")
+icon_bsky <- glue("<span style='font-family:jet;'>&#xe28e;</span>")
 usuario <- glue("<span style='color:{c3};'>**vhgauto**</span>")
 sep <- glue("**|**")
 
 mi_caption <- glue(
   "{fuente}<br>{autor} {sep} {icon_github} {icon_twitter} {icon_instagram} ",
-  "{icon_mastodon} {usuario}"
+  "{icon_mastodon} {icon_bsky} {usuario}"
 )
 
 # datos -------------------------------------------------------------------
