@@ -10,6 +10,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 47
+
+Uso de signos de exclamación e interrogación en episodios de <b>Bob's Burger</b>.
+
+[Script](2024/s47/script.R)
+
+![](2024/s47/viz.png)
+
 ## Semana 46
 
 Códigos ISO 3166-1 de 3 letras que son iguales al inicio del nombre del país, en inglés.
