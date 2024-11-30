@@ -15,7 +15,7 @@ c3 <- "#000000"
 
 # fuente: Ubuntu
 font_add(
-  family = "ubuntu", 
+  family = "ubuntu",
   regular = "fuente/Ubuntu-Regular.ttf",
   bold = "fuente/Ubuntu-Bold.ttf",
   italic = "fuente/Ubuntu-Italic.ttf"
@@ -23,7 +23,7 @@ font_add(
 
 # monoespacio & íconos
 font_add(
-  family = "jet", 
+  family = "jet",
   regular = "fuente/JetBrainsMonoNLNerdFontMono-Regular.ttf"
 )
 
@@ -34,7 +34,7 @@ showtext_opts(dpi = 300)
 fuente <- glue(
   "Datos: <span style='color:{c3};'><span style='font-family:jet;'>",
   "{{<b>tidytuesdayR</b>}}</span> semana {semana_numero}, ",
-  "XXX fuente de datos XXX.</span>"
+  "<b>FUENTE DE DATOS</b>.</span>"
 )
 autor <- glue("<span style='color:{c3};'>**Víctor Gauto**</span>")
 icon_twitter <- glue("<span style='font-family:jet;'>&#xf099;</span>")
