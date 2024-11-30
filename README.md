@@ -10,6 +10,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 48
+
+Encuentros en las fronteras Norte y Sur de Estados Unidos.
+
+[Script](2024/s48/script.R)
+
+![](2024/s48/viz.png)
+
 ## Semana 47
 
 Uso de signos de exclamación e interrogación en episodios de <b>Bob's Burger</b>.
