@@ -101,7 +101,7 @@ cat(
   crayon::bgRed(
     crayon::white(
       glue::glue(
-        "\n\nUsar función {crayon::bold('nueva_semana()')} ",
+        "\n\nUsar {crayon::bold('nueva_semana()')} ",
         "para iniciar el procesamiento.\n\n\n")
     )
   )
