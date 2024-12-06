@@ -10,6 +10,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 49
+
+Velocidad de vehículos, por tamaño y horario, en Inglaterra.
+
+[Script](2024/s49/script.R)
+
+![](2024/s49/viz.png)
+
 ## Semana 48
 
 Encuentros en las fronteras Norte y Sur de Estados Unidos.
