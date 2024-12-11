@@ -10,6 +10,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 50
+
+Popularidad en fragancias de perfumes.
+
+[Script](2024/s50/script.R)
+
+![](2024/s50/viz.png)
+
 ## Semana 49
 
 Velocidad de vehículos, por tamaño y horario, en Inglaterra.
