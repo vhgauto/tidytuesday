@@ -196,11 +196,11 @@ g <- ggplot(d, aes(Release_Year, n, color = Main_Accords, fill = Main_Accords)) 
 # guardo
 ggsave(
   plot = g,
-  filename = "2024/s50/viz2.png",
+  filename = "2024/s50/viz.png",
   width = 30,
   height = 34.5,
   units = "cm"
 )
 
 # abro
-browseURL(paste0(getwd(), "/2024/s50/viz2.png"))
+browseURL(paste0(getwd(), "/2024/s50/viz.png"))
