@@ -65,7 +65,8 @@ tuesdata <- tidytuesdayR::tt_load(año, semana_numero)
 #   filename = "semana_carpeta/viz.png",
 #   width = 30,
 #   height = 30,
-#   units = "cm")
+#   units = "cm"
+# )
 
 # abro
 # browseURL(paste0(getwd(), "/año/semana_carpeta/viz.png"))
