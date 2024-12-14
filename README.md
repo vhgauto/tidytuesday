@@ -10,6 +10,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 51
+
+Cantidad de hechizos por escuela y nivel en <b>Dungeons & Dragons</b>.
+
+[Script](2024/s51/script.R)
+
+![](2024/s51/viz.png)
+
 ## Semana 50
 
 Popularidad en fragancias de perfumes.
