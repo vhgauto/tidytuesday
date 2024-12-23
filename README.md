@@ -10,6 +10,14 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 # 2024
 
+## Semana 53
+
+Restaurantes ganadores del premio [James Beard](https://www.jamesbeard.org/).
+
+[Script](2024/s53/script.R)
+
+![](2024/s53/viz.png)
+
 ## Semana 52
 
 Frecuencia de feriados/celebraciones por día del año.
