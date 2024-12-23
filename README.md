@@ -1,10 +1,8 @@
 <span align="center">
 
-# TidyTuesday
+# [TidyTuesday](https://tidytues.day/)
 
 </span>
-
-Figuras generadas a partir de los datos publicados por [TidyTuesday](https://github.com/rfordatascience/tidytuesday#readme).
 
 <span align="center">
 
