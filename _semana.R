@@ -71,8 +71,6 @@ nueva_semana <- function(semana_numero, año = 2025) {
   # creo directorio
   dir.create(semana_carpeta, recursive = TRUE)
   
-  mensaje("Nueva carpeta creada")
-  
   if (!file.exists(new_file)) {
     file.create(new_file)
     
