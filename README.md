@@ -14,9 +14,9 @@ Figuras generadas a partir de los datos publicados por [TidyTuesday](https://git
 
 Restaurantes ganadores del premio [James Beard](https://www.jamesbeard.org/).
 
-[Script](s53/script.R)
+[Script](2024/s53/script.R)
 
-![](s53/viz.png)
+![](2024/s53/viz.png)
 
 ## Semana 52
 
