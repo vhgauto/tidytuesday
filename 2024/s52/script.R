@@ -16,6 +16,7 @@ c2 <- "#6996E3"
 c3 <- "#EAF3FF"
 c4 <- "grey20"
 c5 <- "#E9AB1B"
+c6 <- "white"
 
 # fuente: Ubuntu
 font_add(
@@ -144,9 +145,9 @@ celeb <- calendar_df |>
 
 celeb_trad <- c(
   "Día de Todos los Santos", "Asunción de María", "Día del Niño", "Navidad",
-  "Día de los Veteranos", "Halloween", "Día de la Independencia",
+  "Viernes Santo", "Halloween", "Día del Empleado Bancario",
   "Día Internacional de la Mujer", "Día Internacional de los Trabajadores",
-  "Año Nuevo", "Nuestra Señora de las Mercedes", "Día de los Enamorados"
+  "Año Nuevo", "Eid al-Adha", "Día de los Enamorados"
 )
 
 celeb_trad <- set_names(celeb_trad, celeb)
@@ -208,7 +209,7 @@ f_cumple <- function(x) {
     # agrego los días del mes
     geom_text(
       aes(label = mday), family = "jet", hjust = .5, nudge_y = .2, size = 3,
-      color = c4
+      color = c6
     ) +
     # día de la semana
     geom_text(
@@ -220,7 +221,8 @@ f_cumple <- function(x) {
       data = fer, aes(label = nombre, x = 4.5, y = 6.5), hjust = .5, size = 4,
       family = "ubuntu", fontface = "plain"
     ) +
-    geom_tile(data = fer, color = c4, fill = NA, linewidth = 1, linetype = "11") +
+    geom_tile(data = fer, color = c2, fill = NA, linewidth = 1) +
+    geom_tile(data = fer, color = c1, fill = NA, linewidth = 1, linetype = "11") +
     # manual
     scale_y_continuous(trans = "reverse") +
     scale_fill_gradientn(
