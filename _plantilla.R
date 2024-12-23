@@ -1,10 +1,8 @@
 
 # paquetes ----------------------------------------------------------------
 
-library(glue)
-library(ggtext)
-library(showtext)
-library(tidyverse)
+# {glue}, {ggtext}, {showtext}, {tidyverse}
+# se cargan automáticamente
 
 # fuente ------------------------------------------------------------------
 
