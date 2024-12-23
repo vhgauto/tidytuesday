@@ -1,6 +1,8 @@
 
 # browseURL("https://nrennie.rbind.io/blog/script-templates-r/")
 
+# mensaje -----------------------------------------------------------------
+
 mensaje <- function(x) {
   cat(
     crayon::bgBlack(
@@ -12,7 +14,9 @@ mensaje <- function(x) {
   )
 }
 
-funciones <- function() {
+# paquetes ----------------------------------------------------------------
+
+paquetes <- function() {
   purrr::map(
     c("glue", "ggtext", "showtext", "tidyverse"),
     ~suppressPackageStartupMessages(
@@ -27,14 +31,16 @@ funciones <- function() {
   )
 }
 
-funciones()
+paquetes()
 
-mensaje("Funciones cargadas")
+# nueva semana ------------------------------------------------------------
 
 # función que crea una nueva carpeta con un script para el procesamiento
 # de los datos de {tidytuesday} de la semana de interés
 
 nueva_semana <- function(semana_numero, año = 2025) {
+  
+  semana_numero <<- semana_numero
   
   # nombre de la carpeta a crear
   if (semana_numero <= 9) {
@@ -108,6 +114,43 @@ nueva_semana <- function(semana_numero, año = 2025) {
   source(new_file)
     
 }
+
+# caption -----------------------------------------------------------------
+
+caption <- function(fuente1, fuente2 = NULL, col) {
+  
+  if (is.null(fuente2)) {
+    fuente <- glue(
+      "Datos: <span style='color:{col};'><span style='font-family:jet;'>",
+      "{{<b>tidytuesdayR</b>}}</span> semana {semana_numero}, ",
+      "<b>{fuente1}</b>.</span>"
+    )
+  } else {
+    fuente <- glue(
+      "Datos: <span style='color:{col};'><span style='font-family:jet;'>",
+      "{{<b>tidytuesdayR</b>}}</span> semana {semana_numero}, ",
+      "<b>{fuente1}</b>, {fuente2}.</span>"
+    )
+  }
+  
+  autor <- glue("<span style='color:{col};'>**Víctor Gauto**</span>")
+  icon_twitter <- glue("<span style='font-family:jet;'>&#xf099;</span>")
+  icon_instagram <- glue("<span style='font-family:jet;'>&#xf16d;</span>")
+  icon_github <- glue("<span style='font-family:jet;'>&#xf09b;</span>")
+  icon_mastodon <- glue("<span style='font-family:jet;'>&#xf0ad1;</span>")
+  icon_bsky <- glue("<span style='font-family:jet;'>&#xe28e;</span>")
+  usuario <- glue("<span style='color:{col};'>**vhgauto**</span>")
+  sep <- glue("**|**")
+  
+  mi_caption <- glue(
+    "{fuente}<br>{autor} {sep} {icon_github} {icon_twitter} {icon_instagram} ",
+    "{icon_mastodon} {icon_bsky} {usuario}"
+  )
+  
+  return(mi_caption)
+}
+
+mensaje("Paquetes y funciones cargadas")
 
 mensaje(
   glue::glue(
