@@ -72,10 +72,10 @@ logo_img <- glue(
 )
 
 mi_subitulo <- glue(
-  "Las cantidad de conferencias<br>que incluyen
+  "La cantidad de conferencias<br>que incluyen
   <span style='font-family:jet; color:{c1}'>quarto</span> <br>
-  amentaron entre 2023 y 2024<br>
-  en las <span style='font-family:jet; color:{c1}'>posit::conf</span>"
+  amentaron en las ediciones<br>
+  2023 y 2024 de <span style='font-family:jet; color:{c1}'>posit::conf</span>"
 )
 
 # figura
