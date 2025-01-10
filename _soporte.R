@@ -117,18 +117,18 @@ nueva_semana <- function(semana_numero, año = 2025) {
 
 # caption -----------------------------------------------------------------
 
-caption <- function(fuente1, fuente2 = NULL, col) {
+caption <- function(fuente1, fuente2 = NULL, col, week) {
   
   if (is.null(fuente2)) {
     fuente <- glue(
       "Datos: <span style='color:{col};'><span style='font-family:jet;'>",
-      "{{<b>tidytuesdayR</b>}}</span> semana {semana_numero}, ",
+      "{{<b>tidytuesdayR</b>}}</span> semana {week}, ",
       "<b>{fuente1}</b>.</span>"
     )
   } else {
     fuente <- glue(
       "Datos: <span style='color:{col};'><span style='font-family:jet;'>",
-      "{{<b>tidytuesdayR</b>}}</span> semana {semana_numero}, ",
+      "{{<b>tidytuesdayR</b>}}</span> semana {week}, ",
       "<b>{fuente1}</b>, {fuente2}.</span>"
     )
   }

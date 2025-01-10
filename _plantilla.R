@@ -29,7 +29,9 @@ showtext_auto()
 showtext_opts(dpi = 300)
 
 # caption
-mi_caption <- caption(fuente1 = "FUENTE DE DATOS", col = c1)
+mi_caption <- caption(
+  fuente1 = "FUENTE DE DATOS", col = c1, week = semana_numero
+)
 
 # datos -------------------------------------------------------------------
 
