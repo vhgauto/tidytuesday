@@ -12,7 +12,15 @@
 
 # 2025
 
-## Semana 1
+## Semana 3
+
+Cantidad de personas muestras en expediciones al Himalaya.
+
+[Script](2025/s03/script.R)
+
+![](2025/s03/viz.png)
+
+## Semana 2
 
 Conferencias asociadas a `quarto` en `posit::conf` entre 2023 y 2024.
 
