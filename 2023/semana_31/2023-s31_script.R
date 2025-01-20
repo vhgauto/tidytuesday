@@ -60,7 +60,7 @@ d <- states |>
   # acomodo de acuerdo a la fracción de agua
   arrange(agua) |> 
   # agrego nro de fila, para usar como eje vertical en la figura
-  # si no, geom_are() no funciona
+  # si no, geom_ribbon() no funciona
   mutate(fila = row_number()) |> 
   # alterno etiquetas a izquierda y derecha de la superficie
   mutate(
