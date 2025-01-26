@@ -12,6 +12,14 @@
 
 # 2025
 
+## Semana 4
+
+Falta de acceso al agua en EE.UU.
+
+[Script](2025/s04/script.R)
+
+![](2025/s04/viz.png)
+
 ## Semana 3
 
 Cantidad de personas muestras en expediciones al Himalaya.
