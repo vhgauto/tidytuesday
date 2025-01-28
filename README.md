@@ -22,7 +22,7 @@ Falta de acceso al agua en EE.UU.
 
 ## Semana 3
 
-Cantidad de personas muestras en expediciones al Himalaya.
+Cantidad de personas muertas en expediciones al Himalaya.
 
 [Script](2025/s03/script.R)
 
